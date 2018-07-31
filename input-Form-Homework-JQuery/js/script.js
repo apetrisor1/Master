@@ -6,7 +6,7 @@ $(window).on('load', function() {
   $('#lName').val('');
   });
 
-
+// whatever
 // Will call function onDomLoaded only once DOM is loaded
 $(document).ready(onDomLoaded);
 
