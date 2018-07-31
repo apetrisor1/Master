@@ -1,0 +1,48 @@
+header {
+  text-align: center;
+  font-size: 2.5em;
+  padding-bottom: 0.5em;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+p#date {
+  text-align: right;
+  padding-bottom: 0.5em;
+}
+p#date:hover {
+  color: #fff;
+  transition: 1.5s;
+}
+
+body {
+  padding: 5% 13% 10% 10%;
+  text-align: justify;
+  background-color: #1d3356;
+  color: #575f6b;
+}
+li {
+  display: list-item;
+}
+
+dt, dd {
+  font-family: sans-serif;
+}
+
+dt {
+  text-indent: 2%;
+}
+
+dt:hover {
+  color: #fff;
+  transition: 1.5s;
+  text-indent: 3%;
+  cursor: pointer;
+}
+
+dd {
+  text-indent: 5%;
+  color: #fff;
+}

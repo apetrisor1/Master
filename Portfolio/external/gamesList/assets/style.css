@@ -1,0 +1,200 @@
+#games-list {
+  position: absolute;
+  width: 85%;
+  margin-bottom: -30%;
+  box-sizing: border-box;
+}
+
+#refresh-titles, #update-multiple {
+  display: inline-block;
+  margin-left: 3.5%; 
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: #d67b39;
+  font-size: 130%;
+  font-weight: 700;
+  font-family: 'Nanum Gothic', sans-serif;
+  text-decoration: none;
+}
+#update-multiple {
+  padding-top: 0px;
+  margin-top: -80px;
+}
+
+#refresh-titles:hover, #update-multiple:hover {
+  color: #fff;
+  transition: 1.5s;
+  cursor: pointer;
+}
+
+#add-button {
+  padding: 20px;
+  margin-bottom: 20px; margin-top: -80px;
+  margin-left: 86%;
+  border: 2px outset #f48642;
+}
+
+header {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #f48642;
+}
+
+
+
+/*  IMAGE */
+/* class of game thumbnails in all games list */
+.each{
+  float:right;
+  margin-top: 105px;
+  width: 30%;
+}
+
+updateGame {
+  color: #f48642;
+  float: left;
+  position: relative;
+  top:70px; left: 3%;
+  font-size: 90%; font-weight: 700;
+  clear: both;
+  margin-bottom: 8px;
+}
+
+updateGame:hover {
+  color: #fff;
+  transition: 1.5s;
+  cursor: pointer;
+}
+
+input {
+  float:right;
+  position: relative;
+  top: 25px;
+  margin-right: 10px;
+  display: none;
+}
+
+.deleter {
+  position: relative;
+  display: block;
+  float: left; 
+}
+
+.submitter {
+  position: relative;
+  left: 39%;
+  top: 55px;
+  display: none;
+  float: right;
+}
+
+
+h1 {
+  width: 103%;
+  padding-bottom: 20px;
+  position: relative;
+  left: -65px;
+}
+
+ul, ol {
+  list-style-type: disc;
+  padding-bottom: 20px;
+}
+
+p#date {
+  text-align: right;
+  padding-bottom: 0.5em;
+}
+p#date:hover {
+  color: #fff;
+  transition: 1.5s;
+}
+
+body {
+  padding: 5% 13% 5% 8%;
+  text-align: justify;
+  background-color: #1d3356;
+  color: #575f6b;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+li {
+  display: list-item;
+}
+
+dt {
+  display: inline-block;
+  text-indent: 2%;
+  color: #d17034;
+  font-size: 85%;
+}
+
+dt:hover {
+  color: #fff;
+  transition: 1.5s;
+  text-indent: 3%;
+  cursor: pointer;
+}
+
+dd {
+  text-indent: 5%;
+  color: #fff;
+  margin-bottom: 275px;
+  margin-top: 50px;
+  width: 45%;
+}
+
+
+iframe {
+  display: none;
+}
+
+.spacer {
+  padding-bottom: 40px;
+}
+
+
+@media only screen and (max-width: 750px) {
+  dd{
+      margin-bottom: 0vh;
+      margin-top: 3vh;
+      width: 85%;
+      text-indent: 2%;
+  }
+  .each {
+      float: left;
+      margin-top: 50px;
+      width: 60%;
+      margin-left: 20%;
+      margin-right: 20%;
+      margin-bottom: 1vh;
+  }
+  ul {
+    padding-bottom: 0;
+}
+  updateGame {
+      left: 7%;
+  }
+}
+/* 
+@media only screen and (max-width: 640px) {
+  .each {
+    display: block;
+    clear: both;
+    margin-top: 105px;
+    width: 30%;
+    margin-left: 30%;
+  }
+  dd {
+    text-indent: 5%;
+    color: #fff;
+    margin-bottom: 275px;
+    margin-top: 50px;
+    width: 85%;
+}
+  
+}
+ */
+
+
+
+

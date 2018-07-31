@@ -1,0 +1,10 @@
+SELECT*
+FROM teams as t 
+inner join notable_players as np ON (np.team_id = t.team_id) 
+inner join players as p ON (p.account_id = np.account_id)
+inner join team_rating as tr ON (tr.team_id = t.team_id) WHERE wins IS NOT NULL
+ORDER BY wins DESC
+
+SELECT *
+FROM team_rating as tr
+inner join teams as t ON (tr.team_id = t.team_id) 

@@ -1,0 +1,39 @@
+// team is an object that represents a team
+// notable player is an object that represents a player, ajax called on a specific team // see: https://docs.opendota.com/#tag/teams%2Fpaths%2F~1teams~1%7Bteam_id%7D~1players%2Fget
+// player is an object that represents the same player, but ajax called individually //         https://docs.opendota.com/#tag/pro-players%2Fpaths%2F~1proPlayers%2Fget
+{           
+            // 
+            "team_id": 983699,  //   key between team and notable player
+            "name": "GIFTIG!", // player name
+            "tag": "turtle",
+            "logo_url": "https://steamusercontent-a.akamaihd.net/ugc/599266384829806068/F680EBF5A261F4488B1D472168429B4C63F0054B/",
+  
+            // notable player
+            "account_id": 88018, //   key between notable player and pro player
+            "country_code": "",
+            "fantasy_role": 1,
+            "team_name": "Turtlemasters", 
+            "team_tag": "turtle",
+            "is_locked": false,
+            "is_pro": true,
+            "locked_until": 0,
+            
+            // pro player
+            "steamid": "76561197960353746",
+            "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/ae/aed0b0fa4bed2039628fe5e95b28de608cfe4359.jpg",
+            "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/ae/aed0b0fa4bed2039628fe5e95b28de608cfe4359_medium.jpg",
+            "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/ae/aed0b0fa4bed2039628fe5e95b28de608cfe4359_full.jpg",
+            "profileurl": "https://steamcommunity.com/profiles/76561197960353746/",
+            "personaname": "zAHARASAURUS",
+            "last_login": null,
+            "full_history_time": "2017-06-03T04:59:21.898Z",
+            "cheese": 0,
+            "fh_unavailable": false,
+            "loccountrycode": "SE",
+            "last_match_time": "2018-07-20T09:55:42.000Z"
+  
+            // Team rating
+            "rating": 1056.04,
+            "wins": 39,
+            "losses": 36
+}            

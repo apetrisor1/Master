@@ -1,0 +1,109 @@
+h3{
+  font-weight: 400;
+}
+
+h3.player-pick{
+  color: blue;
+}
+
+h3.computer-pick{
+  color: red;
+}
+
+h3#chooseWeapon{
+  position: absolute;
+  top: 250px;
+  left: 42.5%;
+}
+
+h3#refresh{
+  position: absolute;
+  top: 250px;
+  left: 35%;
+  visibility: hidden;
+}
+
+div#wrapper{
+  margin-top: 50px;
+}
+
+div#container{
+  position: relative;
+  width: 70%;
+  height: 320px;
+  border: 1.5px outset gray;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h3.result{
+  font-size: 120%;
+  font-weight: 700;
+}
+
+/*  Styles related to the visual cards for player and computer choices */
+ 
+playerPic{
+  display: block;
+  position: absolute;
+}
+
+/* Images are opaque initially # 1. ROCK    2. PAPER    3. SCISSORS */
+
+playerPic.opaque1{
+  top: 80px;
+  left: 0px;
+  opacity: 0.2;
+  filter: alpha(opacity=20); /* For IE8 and earlier */
+}
+playerPic.opaque1:hover{
+  top: 80px;
+  left: 0px;
+  opacity: 1;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
+  cursor: pointer;
+}
+playerPic.opaque2{
+  top: 80px;
+  left: 130px;
+  opacity: 0.2;
+  filter: alpha(opacity=20); /* For IE8 and earlier */
+}
+playerPic.opaque2:hover{
+  top: 80px;
+  left: 130px;
+  opacity: 1;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
+  cursor: pointer;
+}
+playerPic.opaque3{
+  top: 80px;
+  left: 240px;
+  opacity: 0.2;
+  filter: alpha(opacity=20); /* For IE8 and earlier */
+}
+playerPic.opaque3:hover{
+  top: 80px;
+  left: 240px;
+  opacity: 1;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
+  cursor: pointer;
+}
+
+computerPic{
+  display: block;
+  position: absolute;
+}
+computerPic.paper2{
+  top: 80px;
+  right: 20%;
+}
+computerPic.scissors2{
+  top: 80px;
+  right: 20%;
+}
+computerPic.rock2{
+  top: 80px;
+  right: 20%;
+}

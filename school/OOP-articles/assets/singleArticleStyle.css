@@ -1,0 +1,10 @@
+dt {
+  text-indent: 7%;
+}
+
+dt:hover {
+  color: #fff;
+  transition: 1.5s;
+  text-indent: 9%;
+  cursor: auto;
+}

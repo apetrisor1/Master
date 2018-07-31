@@ -1,0 +1,20 @@
+ul {
+  list-style: none;
+}
+
+wrapper{
+  position: relative;
+  width: 100%;
+}
+
+
+/* SPAN CLASSES */
+.score {
+  position: absolute;
+  left: 250px;
+}
+.url {
+  position: absolute;
+  left: 350px;
+  width: 500px;
+}

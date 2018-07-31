@@ -1,0 +1,71 @@
+h3{
+  font-weight: 400;
+}
+
+h3.player-pick{
+  color: blue;
+}
+
+h3.computer-pick{
+  color: red;
+}
+
+h3#replay{
+  position: absolute;
+  top: 250px;
+  left: 42.5%;
+}
+
+div#wrapper{
+  margin-top: 50px;
+}
+
+div#container{
+  position: relative;
+  width: 70%;
+  height: 320px;
+  border: 1.5px outset gray;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h3.result{
+  font-size: 120%;
+  font-weight: 700;
+}
+
+/*  Styles related to the visual cards for player and computer choices */
+ 
+playerPic{
+  display: block;
+  position: absolute;
+}
+playerPic.paper{
+  top: 100px;
+  left: 20%;
+}
+playerPic.scissors{
+  top: 100px;
+  left: 20%;
+}
+playerPic.rock{
+  top: 100px;
+  left: 20%;
+}
+
+computerPic{
+  display: block;
+  position: absolute;
+}
+computerPic.paper2{
+  top: 100px;
+  right: 20%;
+}
+computerPic.scissors2{
+  top: 100px;
+  right: 20%;
+}
+computerPic.rock2{
+  top: 100px;
+  right: 20%;
+}

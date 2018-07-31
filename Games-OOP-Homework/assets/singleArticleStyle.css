@@ -1,0 +1,43 @@
+dt {
+  text-indent: -45%;
+  font-size: 105%;
+}
+dt:hover {
+  color: #fff;
+  transition: 1.5s;
+  text-indent: -43%;
+  cursor: auto;
+}
+
+img {
+  float:right;
+  width: 45%;
+  position: relative;
+  top: 35px;
+  box-sizing: border-box;
+}
+release {
+  display: block;
+  clear: both;
+  width: 45%;
+  box-sizing: border-box;
+  text-align: justify;
+  float: left;
+  margin-left: 3.4%;
+  padding-bottom: 50px;
+}
+
+release:hover {
+  color: #fff;
+  transition: 1.5s;
+  cursor: auto;
+}
+
+
+
+dd {
+  display: block;
+  box-sizing: border-box;
+  width: 45%;
+  float: left;
+}

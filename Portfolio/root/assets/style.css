@@ -1,0 +1,64 @@
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+.columns-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  height: 90%;
+  margin-top: 5%;
+  box-sizing: border-box;
+  border: 1px outset black;
+}
+
+h1 {
+  text-indent: -74%;
+  font-weight: 700;
+  font-size: 150%;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+
+.column {
+  display: inline-block;
+  float: left;
+  width: 20%;
+  margin-left: 4%;
+  height: 20vh;
+  background-color: #6b1bba;
+  border: 1px outset black;
+}
+
+p {
+  font-size: 1em;
+  margin-top: 1.3em;
+}
+
+
+p:hover {
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 750px) {
+  .column {
+    display: block;
+    box-sizing: border-box;
+    width: 90%;
+    margin-bottom: 2vh;
+    margin-left: 5%;
+    height: 10vh;
+  }
+  .columns-wrapper {
+    width: 90%;
+  }
+  
+  h1 {
+  text-indent: -50%;
+  }
+}

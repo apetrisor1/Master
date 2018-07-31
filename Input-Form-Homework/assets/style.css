@@ -1,0 +1,272 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 90%;
+}
+
+/* Styles related to container*/
+container {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px outset #7D7474;
+  width: 45%;
+  height: 305px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+input[type="text"]{
+  width: 30%;
+  margin-left: 5%;
+  margin-top: 14px;
+  border-width: .8px;
+  border-style: outset;
+  border-color: #13ad11;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 90%;
+}
+
+/* The browser colours yellow an input box that autofills. This makes it colour it white or whatever
+ color we want, but you can't get rid of the colour on pressing clear, only by refreshing the page. 
+Another way around this is turning autocomplete off for the form, but we want autocomplete */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+span{
+  margin-left: 5%;
+}
+
+input[type="radio"]{
+  margin-left: 5%;
+}
+
+textarea{
+  margin-left: 5%;
+  width: 30%;
+  height: 70px;
+  border-width: .8px;
+  border-style: outset;
+  border-color: #7D7474;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input[type="submit"]{
+  margin-left: 25.5%;
+  margin-top: 19px;
+  color: white;
+  background-color: rgb(66, 134, 244);
+  width: 57.5px;
+  height: 22px;
+  font-size: 95%;
+}
+
+input[type = "submit"]:hover{
+  cursor: pointer;
+}
+
+img#decorative{
+  position: absolute;
+  left: 44.5%;
+  top: 12px;
+  width: 329px;
+  height: 234px;
+}
+
+
+/* Styles related to the confirmation banner above container*/
+
+banner{
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  background-color: rgb(200, 232, 190);
+  color: rgb(28, 112, 28);
+  border: .75px outset #13ad11;
+  width: 45%;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding-left: 4.5%;
+  padding-top: 5px;
+  visibility: hidden;
+}
+
+bannerText{
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 95%;
+}
+
+closeButton{
+  position: absolute;
+  right: 5px;
+  font-weight: 700;
+  font-size: 90%;
+  color: rgb(28, 112, 28);
+}
+
+closeMessage{
+  position: absolute;
+  right: 25px;
+  font-weight: 700;
+  font-size: 85%;
+  color: rgb(168, 52, 52);
+  display: none;
+}
+
+closeButton:hover{
+  color: rgb(168, 52, 52);
+  cursor: pointer;
+}
+
+/* Makes close message visible only on mouse hover over close button */
+closeButton:hover + closeMessage{
+  color: rgb(168, 52, 52);
+  display: inline;
+}
+
+img#validatedLogo{
+  position: absolute;
+  left: 4.5%;
+  top: -1px;
+  width: 24px;
+  height: 33px;
+}
+
+/* RESPONSIVE MEDIA QUERIES*/
+@media only screen and (max-width: 1495px) {
+  img#decorative{
+    width: 50%;
+    height: 76.5%;
+    top: 13px;
+    left: 45%;
+  }
+  container{
+    height: 305px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  img#decorative{
+    height:70%;
+  }
+  textarea{
+    height: 50px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  img#decorative{
+  left: 42%;
+  width: 54%;
+  height: 65%;
+}
+  img#validatedLogo{
+    width: 21px;
+    height: 28px;
+    top: 0px;
+  }
+  textarea{
+    height: 40px;
+  }
+}
+@media only screen and(max-width: 880px){
+ img#decorative{
+   height: 60%;
+  }
+  banner{
+    height: 70px;
+    width: 60%;
+  }
+  container{
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  img#decorative{
+  left: 41%;
+  width: 53%;
+  height: 60%;
+  top: 25px;
+}
+  img#validatedLogo{
+    width: 18px;
+    height: 25px;
+  }
+  container{
+    width: 60%;
+  }
+  banner{
+    width: 60%;
+    height: 50px;
+    padding-left: 8%;
+    padding-right: 5%;
+    padding-top: 5px;
+    font-size: 90%;
+}
+  textarea{
+    height: 38px;
+  }
+  
+}
+
+@media only screen and (max-width: 780px) {
+  img#decorative{
+    display: none;
+  }
+  input[type="text"]
+  {
+    width: 80%;
+  }
+  textarea{
+    width: 80%;
+  }
+   banner{
+    width: 60%;
+  }
+  container{
+    width: 60%;
+  }
+   bannerText{
+    padding-right: 50px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  closeMessage{
+    top: 30px;
+    right: 5px;
+  }
+}
+
+
+@media only screen and (max-width: 483px) {
+  banner{
+    width: 60%;
+  }
+  container{
+    width: 60%;
+  }
+  bannerText{
+    left: 2px;
+    padding-right: 50px;
+  }
+  closeButton{
+    font-size: 75%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+   bannerText{
+    left: 8px;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+   banner{
+    height: 55px;
+  }
+}
+  

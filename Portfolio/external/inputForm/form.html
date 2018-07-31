@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Input Form</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src = "js/script.js"></script>
+  <style>@import url('https://fonts.googleapis.com/css?family=Open+Sans');</style>
+  <link rel = "stylesheet" type = "text/css" href ="assets/style.css">
+</head>
+  
+<body>
+  <banner><img src= "assets/images/validated.png" id ="validatedLogo" alt="validated"><bannerText id = "bannerText">Thank you for contacting us, </bannerText><clearButton>X</clearButton><clearMessage>Clear</clearMessage></banner>
+  
+  <container>
+    
+      <form action = "" target = "dummyframe">                      <!--  <form action = "js/script.js"> -->
+        <input type = "text" placeholder = "First name" id = "fName" name = "FirstName"><br />
+        <input type = "text" placeholder = "Last name" id = "lName" name = "LastName"><br>
+        <br><span>Gender</span><br>
+        <input type = "radio" name = "Gender" id = "male" value = "male"> M<br>
+        <input type = "radio" name = "Gender" id = "female" value = "female"> F<br><br>
+        <textarea placeholder = "Your message here..." name = "Comments"></textarea><br>
+        <img id = "decorative" src= "assets/images/picture.PNG" alt = "floating boat">
+        <input id = "submit" type = "submit" value = "Submit">
+      </form>
+  
+    <!-- this iframe is targeted by the above form so that the information displayed in console stays there-->
+    <iframe width="0" height="0" border="0" name="dummyframe"></iframe>
+  
+  </container>
+  
+  
+</body>
+</html>
