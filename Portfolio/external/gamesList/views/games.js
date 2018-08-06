@@ -12,7 +12,7 @@
                  {
                    "title": "DOTA 2",
                    "releaseDate": 1373328000,
-                   "description": "Last game you'll ever need, all hail our overlord IceFrog",
+                   "description": "All praise <a href='https://dota2.gamepedia.com/IceFrog' target='_blank'>IceFrog</a>",
                    "genre": "MOBA",
                    "publisher": "Valve Corporation",
                    "imageUrl": "https://assets1.ignimgs.com/thumbs/userUploaded/2016/12/5/dota2top51280-1480968955731_270h.jpg"

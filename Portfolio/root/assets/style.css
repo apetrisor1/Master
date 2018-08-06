@@ -1,3 +1,5 @@
+/* start of desktop styles */
+
 body {
   font-family: 'Nanum Gothic', sans-serif;
 }
@@ -30,13 +32,19 @@ h1 {
   width: 20%;
   margin-left: 4%;
   height: 20vh;
-  background-color: #6b1bba;
-  border: 1px outset black;
+  background-color: #66a5ad;
+}
+.column:hover {
+  background-color: #c4dfe6;
+  transition: 1.33s;
+}
+.column:not(:hover){
+  transition: 2s;
 }
 
 p {
   font-size: 1em;
-  margin-top: 1.3em;
+  margin-top: 31%;
 }
 
 
@@ -45,7 +53,14 @@ p:hover {
 }
 
 
-@media only screen and (max-width: 750px) {
+
+
+@media screen and (max-width: 991px) {
+     /* start of large tablet styles */
+}
+
+@media screen and (max-width: 767px) {
+   /* start of medium tablet styles */
   .column {
     display: block;
     box-sizing: border-box;
@@ -57,8 +72,24 @@ p:hover {
   .columns-wrapper {
     width: 90%;
   }
-  
   h1 {
   text-indent: -50%;
+  }
+  p {
+  font-size: 1em;
+  margin-top: 4.45%;
+  transition: 2s;
+  }
+}
+
+@media screen and (max-width: 479px) {
+     /* start of phone styles */
+  p{
+     margin-top: 6.45%;
+  }
+}
+@media screen and (max-width: 376px) {
+  p{
+     margin-top: 8.45%;
   }
 }

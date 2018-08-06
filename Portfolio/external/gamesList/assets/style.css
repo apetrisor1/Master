@@ -5,6 +5,18 @@ body {
   margin-bottom: 0px;
   font-family: 'Nanum Gothic', sans-serif;
 }
+a {
+  color: default;
+  text-decoration: none;
+  color: #575f6b;
+}
+a:hover {
+  color: #e0c19d;
+  transition: 1s;
+}
+a:not(:hover) {
+  transition: 2s;
+}
 
 header {
   font-size: 2.5em;
@@ -12,6 +24,9 @@ header {
   color: #ddbc95;
   margin-bottom: 2%;
   margin-left: 4.75%;
+}
+.image {
+  transition: 3s;
 }
 
 #refresh-titles, #add-games {
@@ -95,14 +110,24 @@ updateGame {
 
 updateGame:hover {
   color: #ddbc95;
-  transition: 1.5s;
+  transition: 1s;
   cursor: pointer;
+}
+updateGame:not(:hover) {
+  transition: 3s;
 }
 
 .deleter {
   position: relative;
   display: block;
   float: left; 
+}
+.deleter:hover {
+  color: #A43820;
+  transition: 2s;
+}
+.deleter:not(:hover) {
+  transition: 1.5s;
 }
 
 .submitter, .cancel {
@@ -131,10 +156,14 @@ h1 {
 }
 h1:hover {
   color: #e0c19d;
-  transition: 1.5s;
+  transition: 1.9s;
   text-indent: 3%;
   cursor: pointer;
 }
+h1:not(:hover) {
+  transition: 3s;
+}
+
 
 ul {
   list-style-type: none;
@@ -150,11 +179,18 @@ p#date:hover {
   color: #fff;
   transition: 1.5s;
 }
+p#date:not(:hover) {
+  transition: 3s;
+}
 
 iframe {
   display: none;
 }
-
+@media only screen and (min-width: 1350px) {
+  .submitter, .cancel{
+    margin-left: 46%;
+  }
+}
 
 @media only screen and (max-width: 1500px) {
   .image{
