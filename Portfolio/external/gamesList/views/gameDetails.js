@@ -5,12 +5,12 @@ window.addEventListener("load", function() {
   var containerEl = document.getElementById('game-details');
   
   var game = new Game();
-  //   http://cursuri-adrianpetrisor301182.codeanyapp.com/curs20-OOP-part1Revisited/templates/article.html?articleId = 2    // For example
   var gameID = getUrlParameter('gameID');
-  
-  // our article object gets the id from URL
+ 
+
   game._id = gameID;
-  
+  // our article object gets the id from URL
+
   game.getGameDetails().then(function(response){
                                    console.log(response.title);
                                    game.title = response.title;
@@ -18,42 +18,57 @@ window.addEventListener("load", function() {
                                    game.publisher = response.publisher;
                                    game.imageUrl = response.imageUrl;
                                    game.releaseDate = response.releaseDate;
-//                                    game.genre = response.genre;   CURRENTLY N
                                    displayGameDetails(game);
                                    });
   
   function displayGameDetails(gameDetails) {
-      //publisher
-      var publisherEl = document.createElement('h1');
-      publisherEl.innerHTML = gameDetails.publisher + ' presents: ';
-      containerEl.appendChild(publisherEl);
-      //title
-      var titleEl = document.createElement('dt');
-      titleEl.innerHTML = gameDetails.title;
-      containerEl.appendChild(titleEl);
-      // description
-      var bodyEl = document.createElement('dd');
-      bodyEl.innerHTML = gameDetails.description;
-      containerEl.appendChild(bodyEl);
     
-     
-      //game image
-      var gameImage = document.createElement('img');
-      gameImage.setAttribute('src', gameDetails.imageUrl);
-      containerEl.appendChild(gameImage);
+      // html keepers
+      var columnLeft = document.createElement ('column');
+      columnLeft.setAttribute('class' , 'column-left');
+      var columnRight = document.createElement ('column');
+      columnRight.setAttribute('class' , 'column-right');
+    
+      //publisher
+      var publisherEl = document.createElement('h2');
+      publisherEl.innerHTML = gameDetails.publisher + ' presents: ';
+      columnLeft.appendChild(publisherEl);
+    
+      //title
+      var titleEl = document.createElement('h2');
+      titleEl.innerHTML = gameDetails.title;
+      titleEl.setAttribute('class' , 'title');
+      columnLeft.appendChild(titleEl);
+    
+      // description
+      var bodyEl = document.createElement('p');
+      bodyEl.innerHTML = gameDetails.description;
+      bodyEl.setAttribute('class' , 'game-info');
+      columnLeft.appendChild(bodyEl);
+    
       // release date
       var releaseDate = document.createElement('release');
       var dateFormatted = new Date(gameDetails.releaseDate*1000).toString();
       releaseDate.innerHTML = 'Release date: ' + dateFormatted;
-      containerEl.appendChild(releaseDate);
+      columnLeft.appendChild(releaseDate);
+     
+      //game image
+      var gameImage = document.createElement('img');
+      gameImage.setAttribute('src', gameDetails.imageUrl);
+      gameImage.setAttribute('class' , 'image');
+      columnRight.appendChild(gameImage);
+
+    
+      containerEl.appendChild(columnLeft);
+      containerEl.appendChild(columnRight);
    
     
 }
   
   /**
      * It retrieves a query (URL) parameter value
-     * 
      * It expects you to send the parameter key(before '=')
+     * For example http://cursuri-adrianpetrisor301182.codeanyapp.com/Portfolio/external/gamesList/templates/game.html?gameID=5b67739bba3ba40020824706
      * **/  
   function getUrlParameter(name) {
         name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');

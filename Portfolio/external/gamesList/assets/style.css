@@ -1,77 +1,102 @@
-#games-list {
-  position: absolute;
-  width: 85%;
-  margin-bottom: -30%;
-  box-sizing: border-box;
-}
-
-#refresh-titles, #update-multiple {
-  display: inline-block;
-  margin-left: 3.5%; 
-  padding-top: 10px;
-  padding-bottom: 20px;
-  color: #d67b39;
-  font-size: 130%;
-  font-weight: 700;
+body {
+  padding: 4% 2% 1% 5%;
+  background-color: #1d3356;  /*   <-----    */
+  color: #575f6b;
+  margin-bottom: 0px;
   font-family: 'Nanum Gothic', sans-serif;
-  text-decoration: none;
-}
-#update-multiple {
-  padding-top: 0px;
-  margin-top: -80px;
-}
-
-#refresh-titles:hover, #update-multiple:hover {
-  color: #fff;
-  transition: 1.5s;
-  cursor: pointer;
-}
-
-#add-button {
-  padding: 20px;
-  margin-bottom: 20px; margin-top: -80px;
-  margin-left: 86%;
-  border: 2px outset #f48642;
 }
 
 header {
   font-size: 2.5em;
   font-weight: 700;
-  color: #f48642;
+  color: #ddbc95;
+  margin-bottom: 2%;
+  margin-left: 4.75%;
 }
 
-
-
-/*  IMAGE */
-/* class of game thumbnails in all games list */
-.each{
-  float:right;
-  margin-top: 105px;
-  width: 30%;
-}
-
-updateGame {
-  color: #f48642;
-  float: left;
-  position: relative;
-  top:70px; left: 3%;
-  font-size: 90%; font-weight: 700;
+#refresh-titles, #add-games {
+  display: block;
+  margin: 0px;
+  margin-left: 3.5%; 
+  padding-top: 10px;
+  padding-left: 3%;
+  color: #d67b39;
+  font-size: 130%;
+  font-weight: 700;
+  font-family: 'Nanum Gothic', sans-serif;
+  text-decoration: none;
   clear: both;
-  margin-bottom: 8px;
 }
 
-updateGame:hover {
+#refresh-titles{
+  float: left; 
+  width: 100%;
+}
+
+#refresh-titles:hover, #add-games:hover {
   color: #fff;
   transition: 1.5s;
   cursor: pointer;
 }
 
-input {
-  float:right;
-  position: relative;
-  top: 25px;
-  margin-right: 10px;
-  display: none;
+/* Games List */
+
+row {
+  display: block;
+  width: 95%;
+  height: 110%;
+  box-sizing: border-box;
+  margin-bottom: 5%;
+  background-color: #1d3356;   
+  border-bottom: 1px solid #575f6b;
+}
+
+row:last-child {
+  border: none;
+}
+
+column {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 50%;
+  height: inherit;
+}
+
+.column-right {
+  float: right;
+}
+
+.game-info {
+  margin-top: 14%;
+  padding: 5%;
+  text-align: justify;
+  margin-bottom: 13%;
+}
+
+
+/*  IMAGE */
+/* class of game thumbnails in all games list */
+.image-holder{
+  margin-top: 5%;
+  margin-right: 5%;
+}
+.image{
+    float: right;
+    width: 61%;
+  }
+
+updateGame {
+  color: #f48642;
+  float: left;
+  margin-left: 5%;
+  font-size: 90%; font-weight: 700;
+  clear: both;
+}
+
+updateGame:hover {
+  color: #ddbc95;
+  transition: 1.5s;
+  cursor: pointer;
 }
 
 .deleter {
@@ -80,25 +105,41 @@ input {
   float: left; 
 }
 
-.submitter {
-  position: relative;
-  left: 39%;
-  top: 55px;
+.submitter, .cancel {
+  float: left;
+  margin-left: 49%;
+  margin-top: 1.5%;
   display: none;
-  float: right;
+} 
+.cancel{
+  clear:both;
+}
+
+input {
+  margin-left: 30%;
+  margin-top: 0.5%;
+  display: none;
+  display: none;
 }
 
 
 h1 {
   width: 103%;
   padding-bottom: 20px;
-  position: relative;
-  left: -65px;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+h1:hover {
+  color: #e0c19d;
+  transition: 1.5s;
+  text-indent: 3%;
+  cursor: pointer;
 }
 
-ul, ol {
-  list-style-type: disc;
+ul {
+  list-style-type: none;
   padding-bottom: 20px;
+  margin-top: 3%;
 }
 
 p#date {
@@ -110,90 +151,139 @@ p#date:hover {
   transition: 1.5s;
 }
 
-body {
-  padding: 5% 13% 5% 8%;
-  text-align: justify;
-  background-color: #1d3356;
-  color: #575f6b;
-  font-family: 'Nanum Gothic', sans-serif;
-}
-li {
-  display: list-item;
-}
-
-dt {
-  display: inline-block;
-  text-indent: 2%;
-  color: #d17034;
-  font-size: 85%;
-}
-
-dt:hover {
-  color: #fff;
-  transition: 1.5s;
-  text-indent: 3%;
-  cursor: pointer;
-}
-
-dd {
-  text-indent: 5%;
-  color: #fff;
-  margin-bottom: 275px;
-  margin-top: 50px;
-  width: 45%;
-}
-
-
 iframe {
   display: none;
 }
 
-.spacer {
-  padding-bottom: 40px;
-}
 
-
-@media only screen and (max-width: 750px) {
-  dd{
-      margin-bottom: 0vh;
-      margin-top: 3vh;
-      width: 85%;
-      text-indent: 2%;
-  }
-  .each {
-      float: left;
-      margin-top: 50px;
-      width: 60%;
-      margin-left: 20%;
-      margin-right: 20%;
-      margin-bottom: 1vh;
-  }
-  ul {
-    padding-bottom: 0;
-}
-  updateGame {
-      left: 7%;
+@media only screen and (max-width: 1500px) {
+  .image{
+    width: 63%;
   }
 }
-/* 
-@media only screen and (max-width: 640px) {
-  .each {
-    display: block;
-    clear: both;
-    margin-top: 105px;
-    width: 30%;
-    margin-left: 30%;
+@media only screen and (max-width: 1300px) {
+  .image{
+    width: 65%;
   }
-  dd {
-    text-indent: 5%;
-    color: #fff;
-    margin-bottom: 275px;
-    margin-top: 50px;
-    width: 85%;
 }
+@media only screen and (max-width: 1024px) {
+  .submitter, .cancel {
+    margin-left: 54%;
+  }
+  .game-info {
+    margin-bottom: 0%;
+    margin-top: 20%;
+  }
+}
+@media screen and (max-width: 991px) {
+/* start of large tablet styles */
   
+   body {
+    padding: 4% 0% 1% 1%;
+  }
+  
+  row {
+    width: 102%;
+  }
+  
+  ul{
+    width: 90%;
+  }
+  .image{
+    width: 70%;
+    width: 82%;
+    margin-top: 6%;
+  }  
+  .game-info {
+    margin-top: 22%;
+  }
+    .submitter, .cancel {
+    margin-left: 60%;
+  }
+
 }
- */
+
+@media screen and (max-width: 767px) {
+/* start of medium tablet styles */
+  
+  .image {
+    width: 70%;
+    width: 82%;
+    margin-right: 9.5%;
+    margin-top: 0%;
+    margin-bottom: 3%;
+  }
+  column {
+    display: block;
+    box-sizing: border-box;
+    width: 97%;
+    height: inherit;
+  }
+  row {
+    border: none;
+  }
+  
+  h1 {
+    margin-top: 10%;
+  }
+  
+  .game-info {
+    margin-top: 10%;
+  }
+  
+  .column-right {
+    margin-bottom: 8%;
+  }
+  ul{
+    padding-left: 1.25%;
+  }
+  updateGame {
+    margin-left: 7.25%;
+  }
+  .game-info {
+    padding-left: 0px;
+    margin-left: 5%;
+  }
+  input{
+    margin-left: 2%;
+    margin-bottom: 1.25%;
+  }
+  .submitter, .cancel{
+    margin-left: 2%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+/* start of phone styles */
+  body{
+    padding-top: 6%;
+  }
+  h1{
+    padding-bottom: 0px;
+  }
+  .image{
+    width: 92%;
+    float: left;
+    margin-left: 4%;
+  }
+  .game-info {
+    margin-left: 7%;
+    margin-top: 24%;
+  }
+  updateGame {
+    margin-bottom: 1%;
+  }
+  input {
+    margin-left: 4%;
+  }
+  input:first-of-type {
+    margin-top: 10%;
+  }
+  .submitter, .cancel {
+    margin-left: 3.9%;
+  }
+}
+
 
 
 

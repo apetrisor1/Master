@@ -1,5 +1,5 @@
  
-// Game objects used for CREATE
+// Personal game objects used for CREATE
  var myGames = [
                  {
                    "title": "Assetto Corsa",
@@ -22,23 +22,33 @@
 
 window.addEventListener("load", function() {
   
+  // Refresh API games button
+  $('#refresh-titles').click( function() {
+    console.log('refreshed');
+    window.open("https://games-world.herokuapp.com/regenerate-games", "dummyframe");
+    setTimeout(location.reload(),300);
+})
   
+  var containerAll = document.getElementById('all-games-list');
   // HTML container for all data
-  var containerEl = document.getElementById('games-list');
- 
-  // ALL games received are in games model
+
   var gamesModel = new Games();
+  // ALL games received are in games model
+
+ 
+ 
   
-  // displayAllGames is main function, contains:
-  //                                             displayGame(game);    <-- displays each game in list      
-  //                                             update(game._id);     <-- updates entry
-  //                                             deleteGame(game);     <-- deletes entry
-  //                                             addGame(game);        <-- adds entry
-  
-  
-  // Request all information from server then call the main function to display it all
   gamesModel.getAll().then(displayAllGames);
+    // Request all information from server then call the main function to display screen
+   
+
   function displayAllGames(gamesData) {
+    // displayAllGames is main function, contains:
+    //                                             displayGame(game);    <-- displays each game in list      
+    //                                             update(game._id);     <-- updates entry
+    //                                             deleteGame(game);     <-- deletes entry
+    //                                             addGame(game);        <-- adds entry
+  
     for(var i=0; i < gamesData.length; i++){
       var game = new Game(gamesData[i]); 
       displayGame(game);  // Display each game
@@ -46,21 +56,17 @@ window.addEventListener("load", function() {
       deleteGame(game);   // Add remove functionality on each game
     }
     // End of games list displayed on screen
+    console.log('We are working with ' + gamesData.length + ' games');
+    // log list info
     
     
-    var addButton = document.createElement('updateGame');
-    addButton.innerHTML = "Add games";
-    addButton.setAttribute('id' , 'add-button')
-    containerEl.appendChild(addButton); // Button, will be used for adding our hardcoded games to the API games object
     
-    console.log(gamesData.length);
-    
-    myGames.forEach(function(gameObj){  // addGame() adds each of our new games to the collection
+    myGames.forEach(function(gameObj){  // addGame() adds each of our personal games to the collection
                            addGame(gameObj);
     });
+    
     function addGame(game){
-         $('#add-button').click(function(){
-                                $('#add-button').css('display' , 'none');
+         $('#add-games').click(function(){
                                 let gameObj = new Game(game);
                                 displayGame(gameObj);
                                 console.log(gameObj);
@@ -77,9 +83,10 @@ window.addEventListener("load", function() {
                                        $(`#input1_${game_id}`).css('display' , 'block');
                                        $(`#input2_${game_id}`).css('display' , 'block');
                                        $(`#input3_${game_id}`).css('display' , 'block');
-                                       $('.deleter').css('display' , 'none');
-                                       $('.updater').css('display' , 'none');
+                                       $(`#deleter_${game_id}`).css('display' , 'none');
+                                       $(`#updater_${game_id}`).css('display' , 'none');
                                        $(`#submitter_${game_id}`).css('display' , 'block');
+                                       $(`#cancel_${game_id}`).css('display' , 'block');
                                     })
     
     // sends inputted value via PUT method
@@ -106,6 +113,17 @@ window.addEventListener("load", function() {
                                              location.reload();
                                              }
                                          })   
+  // cancels update operation
+  $(`#cancel_${game._id}`).click(function(){  
+                                       $(`#image_${game_id}`).css('display' , 'block');
+                                       $(`#input1_${game_id}`).css('display' , 'none');
+                                       $(`#input2_${game_id}`).css('display' , 'none');
+                                       $(`#input3_${game_id}`).css('display' , 'none');
+                                       $(`#deleter_${game_id}`).css('display' , 'block');
+                                       $(`#updater_${game_id}`).css('display' , 'block');
+                                       $(`#submitter_${game_id}`).css('display' , 'none');
+                                       $(`#cancel_${game_id}`).css('display' , 'none');
+  })
     
   } // END of update function
   
@@ -129,26 +147,42 @@ window.addEventListener("load", function() {
   // Display each game on screen 
   
   function displayGame(game) {
+    
     // html keepers
-    var liEl = document.createElement('dt');
-    var liEl2 = document.createElement('dd');
+    var containerRow = document.createElement('row');
+    var columnLeft = document.createElement('column');
+    columnLeft.setAttribute('class' , 'column-left');
+    var columnRight = document.createElement('column');
+    columnRight.setAttribute('class' , 'column-right');
+
+
+    
     // title
     var titleEl = document.createElement('h1');
     titleEl.innerHTML = game.title;
     titleEl.setAttribute('id',`${game._id}`);
-    liEl.appendChild(titleEl);
+    columnLeft.appendChild(titleEl);
     
     // update button for CRUD
     var updateButton = document.createElement('updateGame');
     updateButton.innerHTML = "Update release";
     updateButton.setAttribute('class','updater');
     updateButton.setAttribute('id',`updater_${game._id}`);
+    columnLeft.appendChild(updateButton);
     
      // delete button for CRUD DELETE
     var deleter = document.createElement('updateGame');
     deleter.innerHTML = 'Delete release';
     deleter.setAttribute('class','deleter');
     deleter.setAttribute('id' , `deleter_${game._id}`);
+    columnLeft.appendChild(deleter);
+    
+    // description
+    var bodyEl = document.createElement('p');
+    bodyEl.innerHTML = game.description;
+    bodyEl.setAttribute('class' , 'game-info');
+    columnLeft.appendChild(bodyEl);
+
      
     //  input fields for CRUD UPDATE
     var inputField1 = document.createElement('input');
@@ -162,53 +196,48 @@ window.addEventListener("load", function() {
     inputField1.setAttribute('id',`input1_${game._id}`);
     inputField2.setAttribute('id',`input2_${game._id}`);
     inputField3.setAttribute('id',`input3_${game._id}`);
+    columnRight.appendChild(inputField1);
+    columnRight.appendChild(inputField2);
+    columnRight.appendChild(inputField3);
+
     
-        // submit button for CRUD UPDATE
+    // submit button for CRUD UPDATE
     var submitter = document.createElement('button');
     submitter.innerHTML = 'Submit';
     submitter.setAttribute('id',`submitter_${game._id}`);
     submitter.setAttribute('class','submitter');
+    columnRight.appendChild(submitter);
     
-    
-    // description
-    var bodyEl = document.createElement('p');
-    bodyEl.innerHTML = game.description;
-    liEl2.appendChild(bodyEl);
+    // cancel button for UPDATE
+    var cancel = document.createElement('button');
+    cancel.innerHTML = 'Cancel';
+    cancel.setAttribute('id',`cancel_${game._id}`);
+    cancel.setAttribute('class','cancel');
+    columnRight.appendChild(cancel);
     
     // image
     var imageHolder = document.createElement('div');
     var imageEachGame = document.createElement('img');
     imageEachGame.setAttribute('id',`image_${game._id}`);
     imageEachGame.setAttribute('src', game.imageUrl);
-    imageEachGame.setAttribute('class','each');
-    
-    // empty p for correct formatting : goes after each title
-    var spacer = document.createElement('p');
-    spacer.setAttribute('class',`spacer`);
+    imageEachGame.setAttribute('class','image');
+    imageHolder.setAttribute('class' , 'image-holder');
+    imageHolder.appendChild(imageEachGame);
+    columnRight.appendChild(imageHolder);
+
     
     // append all to body
-    containerEl.appendChild(liEl);
-    containerEl.appendChild(updateButton);
-    containerEl.appendChild(deleter);
-    containerEl.appendChild(inputField1);
-    containerEl.appendChild(inputField2);
-    containerEl.appendChild(inputField3);
-    containerEl.appendChild(imageEachGame);
-    containerEl.appendChild(submitter);
-    containerEl.appendChild(liEl2); 
-    containerEl.appendChild(spacer);
+    containerRow.appendChild(columnLeft);
+    containerRow.appendChild(columnRight);
+    containerAll.appendChild(containerRow);      
+
     
     // Set click listener on every game to go to the respective single game page
     $(`#${game._id}`).click(function(){
       window.open(`game.html?gameID=${game._id}`, "_blank");
     })
     
-    // Refresh API games button
-    $('#refresh-titles').click( function() {
-      console.log('refreshed');
-      window.open("https://games-world.herokuapp.com/regenerate-games", "dummyframe");
-      setTimeout(location.reload(),200);
-    })
+   
     
   }
   
