@@ -66,7 +66,6 @@ console.log("");
        {
         document.getElementsByClassName("rock")[0].addEventListener('click', playGame());
         document.getElementById('chooseWeapon').style.visibility = 'hidden';
-        document.getElementById('refresh').style.visibility = 'visible';
        }else{ // if playing by choosing a new hand we must first delete previous notifications by removing the respective DOM node.
               // Note that we don't need to alter the visibility of bottom messages because they are set on first playthrough
         document.getElementById('choices').removeChild(document.getElementById('choices').childNodes[1]);
@@ -89,7 +88,6 @@ console.log("");
        if(choiceMade === false){
          document.getElementsByClassName("paper")[0].addEventListener('click', playGame());
          document.getElementById('chooseWeapon').style.visibility = 'hidden';
-         document.getElementById('refresh').style.visibility = 'visible';
        }else{ // if playing by choosing a new hand we must first delete previous notifications by removing the respective DOM node.
               // Note that we don't need to alter the visibility of bottom messages because they are set on first playthrough
          document.getElementById('choices').removeChild(document.getElementById('choices').childNodes[1]);
@@ -113,7 +111,6 @@ console.log("");
        if(choiceMade === false){
          document.getElementsByClassName("scissors")[0].addEventListener('click', playGame());
          document.getElementById('chooseWeapon').style.visibility = 'hidden';
-         document.getElementById('refresh').style.visibility = 'visible';
        }else{ // if playing by choosing a new hand we must first delete previous notifications by removing the respective DOM node.
               // Note that we don't need to alter the visibility of bottom messages because they are set on first playthrough
          document.getElementById('choices').removeChild(document.getElementById('choices').childNodes[1]);
@@ -258,7 +255,6 @@ console.log("");
           document.getElementById('result').appendChild(result);
          }
   } 
- document.getElementsByTagName('span')[0].addEventListener('click', function() {location.reload()});
 
   // 3. Shows in csonsole pseudo distribution of getRandomInt
   // Keeper holds the outcomes of 100 random hands
