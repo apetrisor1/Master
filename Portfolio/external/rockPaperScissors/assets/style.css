@@ -85,26 +85,26 @@ playerPic.paper{
   top: 80px;
   left: 130px;
   opacity: 0.2;
-  filter: alpha(opacity=20); /* For IE8 and earlier */
+  filter: alpha(opacity=20); 
 }
 playerPic.paper:hover{
   top: 80px;
   left: 130px;
   opacity: 1;
-  filter: alpha(opacity=100); /* For IE8 and earlier */
+  filter: alpha(opacity=100); 
   cursor: pointer;
 }
 playerPic.scissors{
   top: 80px;
   left: 240px;
   opacity: 0.2;
-  filter: alpha(opacity=20); /* For IE8 and earlier */
+  filter: alpha(opacity=20); 
 }
 playerPic.scissors:hover{
   top: 80px;
   left: 240px;
   opacity: 1;
-  filter: alpha(opacity=100); /* For IE8 and earlier */
+  filter: alpha(opacity=100);
   cursor: pointer;
 }
 computerPic{
@@ -117,6 +117,13 @@ computerPic.paperPC, computerPic.scissorsPC, computerPic.rockPC {
 }
 span:hover {
   cursor: pointer;
+}
+
+
+@media screen and (min-width: 900px) {
+  img{
+    width: 130px;
+  } 
 }
 
 @media screen and (max-width: 1200px) {
@@ -144,7 +151,6 @@ span:hover {
   right: 4%;
   }
 }
-
 @media screen and (max-width: 479px) {
   /* start of phone styles */
   div#container {

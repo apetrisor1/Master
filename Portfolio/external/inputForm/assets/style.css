@@ -151,6 +151,13 @@ iframe {
   container{
     height: 305px;
   }
+  input[type="text"]
+  {
+    font-size: 80%;
+  }
+   textarea{
+    font-size: 80%;
+  }
 }
 @media only screen and (max-width: 1200px) {
   img#decorative{
@@ -222,9 +229,16 @@ iframe {
   input[type="text"]
   {
     width: 80%;
+    font-size: 73%;
+    margin-left: 9%;
+  }
+  input[type="radio"]{
+    margin-left: 9%;
   }
   textarea{
     width: 80%;
+    font-size: 73%;
+    margin-left: 9%;
   }
    banner{
     width: 60%;
@@ -234,6 +248,56 @@ iframe {
   }
    bannerText{
     padding-right: 50px;
+  }
+  span{
+    margin-left: 9%;
+  }
+}
+@media only screen and (min-width: 650px) and (max-width: 780px){
+  input[type="text"] {
+    width: 35%;
+    font-size: 73%;
+    margin-left: 4%;
+  }
+  input[type="radio"] {
+    margin-left: 4%;
+  }
+  textarea {
+    width: 35%;
+    margin-left: 4%;
+  }
+  img#decorative{
+    display: block;
+    width: 54%;
+    height: auto;
+    margin-left: 2%;
+    margin-top: -2.5%;
+  }
+}
+
+@media only screen and (min-width: 414px) and (max-width: 415px){
+  img#decorative{
+    display: block;
+    width: 48%;
+    height: auto;
+    margin-left: -3%;
+    margin-top: 24.5%;
+  }
+   input[type="text"] {
+    width: 70%;
+    font-size: 73%;
+    margin-left: 15%;
+  }
+  input[type="radio"] {
+    margin-left: 15%;
+  }
+  span{
+    margin-left: 15%;
+  }
+  textarea {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 10%;
   }
 }
 

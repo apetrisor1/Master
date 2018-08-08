@@ -59,21 +59,20 @@ window.addEventListener("load", function() {
     console.log('We are working with ' + gamesData.length + ' games');
     // log list info
     
-    
-    
-    myGames.forEach(function(gameObj){  // addGame() adds each of our personal games to the collection
-                           addGame(gameObj);
-    });
-    
+    // add my personal games to server
     function addGame(game){
-         $('#add-games').click(function(){
-                                let gameObj = new Game(game);
-                                displayGame(gameObj);
-                                console.log(gameObj);
-                                gamesModel.addNewGame('https://games-world.herokuapp.com/games' , game);
-                                location.reload();
-                                           })
-    }
+                      let gameObj = new Game(game);
+                      displayGame(gameObj);
+                      console.log(gameObj);
+                      gamesModel.addNewGame('https://games-world.herokuapp.com/games' , game);                         
+    }    
+    $('#add-games').click(function(){
+         myGames.forEach(function(gameObj){  // addGame() adds each of our personal games to the collection
+                           addGame(gameObj);
+         });
+         setTimeout(location.reload(),300);
+    });
+  
     
      // update a game in server array
     function update(game_id){
