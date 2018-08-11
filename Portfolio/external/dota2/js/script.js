@@ -89,7 +89,7 @@ function domLoaded() {
         }  
     }
     
-     // If sessionStorage already contains a player object, we use that
+    // If sessionStorage already contains a player object, we use that
     // else we ajax call the player object, then use it to create functionality
     if (sessionStorage.getItem(selectPlayer(playerId)) != null && sessionStorage.getItem(selectPlayer(playerId)) !== undefined) {
       var player = selectPlayer(playerId);

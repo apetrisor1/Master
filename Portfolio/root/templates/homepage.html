@@ -3,27 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>List</title>
   <style>
   @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700');
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="../views/routes.js" type="text/javascript"></script>
+  <script src="../views/script.js" type="text/javascript"></script>
   <link rel="stylesheet" href="../assets/reset.css" type="text/css">
   <link rel="stylesheet" href="../assets/style.css" type="text/css">
 </head>
 <body>
-      
   
   <div class='wrapper'>
     <div class='columns-wrapper'> 
-      <h1> Portfolio</h1>
-      <div class='column'><p id='inputForm'>Input Form</p></div>
-      <div class='column'><p id='rockPaperScissors'>Rock Paper Scissors</p></div>
-      <div class='column'><p id='gamesList'>Games List</p></div>
-      <div class='column'><p id='dota'>DOTA2 Rosters</p></div>
+        <img class='background-image' src="../assets/images/lamp.jpg" width="20%" alt='lamp_image'>
+        <h3 id='about-me'> About me</h3>
+        <h3 id='portfolio'> Portfolio</h3>
+        <div class="flex-container">
+            <div class="item auto column "><p id='inputForm'>Input Form</p></div>
+            <div class="item auto column"><p id='rockPaperScissors'>Rock Paper Scissors</p></div>
+            <div class="item auto column"><p id='gamesList'>Games List</p></div>
+            <div class="item auto column"><p id='dota'>DOTA2 Rosters</p></div>
+        </div>
+        <description>
+          <aside class="aside left">
+            <p class='navigation about'>
+              about
+            </p>
+            <p class='navigation open-app'>
+              open app
+            </p>
+           <p class='navigation api-info-button'>
+              api info
+            </p>
+          </aside>
+          <aside class="aside right">
+          <!-- To be filled from list.js        -->
+          </aside>
+        </description>
     </div>
-    
   </div>
+  
 </body>
 </html>

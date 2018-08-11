@@ -1,5 +1,5 @@
 // CURS 9  -  Rock Paper Scissors game
-// Player gets random hand, computer gets random hand. Show winner.
+// Player pics, computer gets random hand. Show winner.
   
 // Call function when DOM is loaded to initiate game.
 document.addEventListener("DOMContentLoaded", function(){

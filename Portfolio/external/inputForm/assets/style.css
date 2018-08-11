@@ -25,6 +25,7 @@ input[type="text"]{
   border-color: #13ad11;
   font-family: 'Open Sans', sans-serif;
   font-size: 90%;
+  transition: 0.3s;
 }
 
 /* The browser, by default, colours yellow an input box when it is autofilled. This colours the input box
