@@ -35,6 +35,14 @@ var app_info = [
   }
 ]
 
+var state = 0; // state of our application
+// 0 - blank homepage
+// 1 - user clicked about me
+// 2 - user clicked portfolio
+// 3 - user clicked on an app
+// 4 - user clicked  on about app
+// 5 - user clicked  on about api 
+
 // Display-hide functions
 function showDescription(){
   $('aside').css('display','inline-block');
@@ -59,10 +67,15 @@ function domLoaded(){
 
   $('#portfolio').click(function(){
       showPortfolio();
+      getAppData();
+      state=2;
+      console.log('state', state);
   })
 
    $('#about-me').click(function(){
       showAboutMe();
+      state=1;
+      console.log('state', state);
    });
 
   
@@ -82,6 +95,7 @@ function domLoaded(){
     let imageUrl = '../assets/images/' + appName + '.png';
     let image = document.createElement('img');
     image.setAttribute('class', `logo ${appName}_logo`);
+    image.setAttribute('id','logo');
     image.setAttribute('src' , imageUrl);
     container.appendChild(image);
   }
@@ -96,30 +110,28 @@ function domLoaded(){
     showDescription();
     clearDescription();
     createLogo(app_name);
+    state = 3;
+    console.log('state', state);
   }
   
  // User selection of app in portfolio
   
   $('#inputForm').click(function(){
-//       window.open(`../../external/inputForm/form.html`, "_blank");
          animateApp('inputForm');
          $('.api-info-button').css('display' , 'none');
   })
   
   $('#rockPaperScissors').click(function(){
-//       window.open(`../../external/rockPaperScissors/rockPaperScissors.html`, "_blank");
          animateApp('rockPaperScissors');
          $('.api-info-button').css('display' , 'none');
   })
   
   $('#gamesList').click(function(){
-   //    window.open(`../../external/gamesList/templates/games.html`, "_blank");
          animateApp('gamesList');
          $('.api-info-button').css('display' , 'block');
   })
   
   $('#dota').click(function(){
-  //     window.open(`../../external/dota2/dota2.html`, "_blank");
          animateApp('dota');
          $('.api-info-button').css('display' , 'block');
   })
@@ -128,45 +140,77 @@ function domLoaded(){
   
   
 
-   // Functions that display app info when clicking 'about' and 'api info'
+   // Clicking 'about' and 'api info'
   function populateAboutScreen(app){
     clearDescription();
-//     console.log('our application object is:', app);
     var description = document.createElement('h3');
     description.setAttribute('class' , 'app-info');
     description.innerHTML = app.about;
     container.appendChild(description);
   }
-  
   function populateApiScreen(app){
       clearDescription();
-//       console.log('our application object for api screen is:', app);
       var aboutApi = document.createElement('h3');
       aboutApi.setAttribute('class' , 'api-description');
       aboutApi.innerHTML = app.api_description;
       container.appendChild(aboutApi);
   }
-  
-  
+
+  function getAppAbout(){
+      app_info.forEach(function(app){
+          if($('.about').attr('name') == app.name){
+             populateAboutScreen(app);
+          }
+      })
+  }
+  function getAppAboutApi(){
+      app_info.forEach(function(app){
+          if($('.api-info-button').attr('name') == app.name){
+            populateApiScreen(app); 
+          }
+      })
+  }
+
+ // Animation that moves app logo when clicking About
+ function moveRight() {
+      var logo = document.getElementById('logo');
+      var pos = 0;
+      //position on X Axis
+
+      let move = setInterval(frame,5);
+      //start moving, once every 5 miliseconds
+
+      function frame() {
+          if (pos == 400) {
+            clearInterval(move);
+          } else {
+            pos++; 
+            logo.style.left = pos/10 + '%'; 
+            logo.style.opacity = 1 - pos/160;
+          }
+      }
+  }
+
+ 
+
   function getAppData(){
-      // about
       $('.about').click(function(){
-        app_info.forEach(function(app){
-           if($('.about').attr('name') == app.name){
-              populateAboutScreen(app); 
-           }
-        })
+        if(state === 3){
+          moveRight();
+          setTimeout(getAppAbout,800);
+        }else{
+          getAppAbout();
+        }
+        state = 4;
+        console.log('state', state);
       })
       // api-info
       $('.api-info-button').click(function(){
-        app_info.forEach(function(app){
-           if($('.api-info-button').attr('name') == app.name){
-              populateApiScreen(app); 
-           }
-        })
+        getAppAboutApi();
+        state = 5;
+        console.log('state', state);
       })
   }
-  getAppData();
   
   
   
@@ -183,9 +227,32 @@ function domLoaded(){
   }
   openApp();
 
+ 
 
-  
+ 
 
+
+}
+// End of domLoaded()
+
+
+
+
+
+
+// GETTING A CSS PROPERTY IN JS:
+
+ // function getCssProperty(elementID,prop){
+  //   let elem = document.getElementById(elementID);
+  //   let styleOfElem = window.getComputedStyle(logo);
+  //   let result = styleOfLogo.getPropertyValue(prop);
+  //   console.log('result is', result);
+  //   return result;
+  // }
+
+
+
+// WORKING WITH COOKIES:
 
 //   document.cookie = "username= Anca; expires Thu, 18 Dec 2019 12:00:00 UTC; path=/";
 //   document.cookie = "language= en; expires Thu, 18 Dec 2019 12:00:00 UTC; path=/";
@@ -201,5 +268,3 @@ function domLoaded(){
   
 //    getCookie();
   
-}
-// End of domLoaded()
