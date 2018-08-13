@@ -3,7 +3,7 @@ var app_info = [
   {
     name: 'inputForm',
     about: '<ul>' +
-    '<li>An input form with mandatory <strong>first</strong> and <strong>last name</strong> fields.</li>' +
+    '<li>Input form with mandatory <strong>first</strong> and <strong>last name</strong> fields.</li>' +
     '<li>On submit, information is logged to console.</li>' +
     '<li>Customer gets overhead banner, clear resets form.</li>' +
     "<li class='mobile-friendly'>Mobile Friendly: Yes</li>" +
@@ -23,13 +23,21 @@ var app_info = [
   },
   {
     name: 'gamesList',
-    about: 'a list of games',
+    about: '<ul>' +
+    '<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>' + 
+    '<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>'+
+    '<li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>'+
+    '<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>',
     short_url: '../../external/gamesList/templates/games.html',
     api_description: 'apodspoaksdpaksdpoakdspaokdspakdadadadada'
   },
   {
     name: 'dota',
-    about: 'dota2 the OG moba',
+    about: '<ul>' +
+    '<li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et</li>'+
+    '<li>quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur</li>'+
+    '<li>magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</li>'+
+    '<li>sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</li>',
     short_url: `../../external/dota2/dota2.html`,
     api_description: 'apodspoaksdpaksdpoakdspaokdspakdadadadada'
   }
@@ -65,6 +73,8 @@ function showAboutMe(){
 $(domLoaded)
 function domLoaded(){
 
+  blinkingCat();
+
   $('#portfolio').click(function(){
       showPortfolio();
       getAppData();
@@ -76,6 +86,7 @@ function domLoaded(){
       showAboutMe();
       state=1;
       console.log('state', state);
+      location.reload();
    });
 
   
@@ -137,8 +148,7 @@ function domLoaded(){
   })
   
   
-  
-  
+ 
 
    // Clicking 'about' and 'api info'
   function populateAboutScreen(app){

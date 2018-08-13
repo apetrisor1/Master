@@ -9,7 +9,6 @@ html{
 .title:hover {
   color: #fff;
   transition: 1.5s;
-  text-indent: 3%;
   cursor: pointer;
 }
 
