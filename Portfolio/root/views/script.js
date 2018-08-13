@@ -9,37 +9,52 @@ var app_info = [
     "<li class='mobile-friendly'>Mobile Friendly: Yes</li>" +
     '</ul>',
     short_url: `../../external/inputForm/form.html`,
-    api_description: 'apodspoaksdpaksdpoakdspaokdspakdadadadada'
   },
   {
     name: 'rockPaperScissors',
-    about: '<ul>' +
+    about: 
+    '<ul>' +
     "<li>Player pics hand, computer gets a random hand. Shows winner.</li>" +
     '<li>Console logs a pseudo-random distribution of 100 hands </li>' +
     "<li class='mobile-friendly'>Mobile Friendly: Yes</li>" +
     '</ul>',
     short_url: `../../external/rockPaperScissors/rockPaperScissors.html`,
-    api_description: 'apodspoaksdpaksdpoakdspaokdspakdadadadada'
   },
   {
     name: 'gamesList',
-    about: '<ul>' +
-    '<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>' + 
-    '<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>'+
-    '<li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>'+
-    '<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>',
+    about:
+    '<ul>' +
+    "<li>Web application that interacts with a collection of games, received from a private API.</li>" + 
+    '<li>Has CRUD functionality.</li>'+
+    '<li>Individual display of elements. </li>'+
+    "<li class='mobile-friendly'>Mobile Friendly: Yes</li>" +
+    '</ul>',
     short_url: '../../external/gamesList/templates/games.html',
-    api_description: 'apodspoaksdpaksdpoakdspaokdspakdadadadada'
+    api_description: 
+    '<ul>' +
+    '<li>Has 10 game objects in initial state. Can be updated/deleted. Collection can be empty.</li>'+
+    '<li>Postman collection: https://www.getpostman.com/collections/df971fc1c71c76ba2aa1</li>' + 
+    '<li>Regenerates collection: https://games-world.herokuapp.com/regenerate-games</li>'+
+    '</ul>'
   },
   {
     name: 'dota',
     about: '<ul>' +
-    '<li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et</li>'+
-    '<li>quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur</li>'+
-    '<li>magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</li>'+
-    '<li>sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</li>',
+    '<li>Web application, calls a public API that holds game-related information. </li>'+
+    '<li>DOTA 2 is a popular strategy game with hundreds of pro and semi-pro teams around the world.</li>'+
+    "<li>Displays all notable players of a selected team. Links to each player's Steam profile.</li>"+
+    '<li>App has nested calls and uses Session Storage to hold collections once they are received.</li>'+
+    "<li class='mobile-friendly'>Mobile Friendly: No</li>"+
+    '</ul>',
     short_url: `../../external/dota2/dota2.html`,
-    api_description: 'apodspoaksdpaksdpoakdspaokdspakdadadadada'
+    api_description: '<ul>' +
+    '<li>Documentation: https://docs.opendota.com/</li>'+
+    '<li>GET calls used: </li>'+
+    '<li>Teams: api.opendota.com/api/teams/{team_id}</li>'+
+    '<li>Players of a team: api.opendota.com/api/teams/{team_id}/players</li>'+
+    '<li>Player: https://api.opendota.com/api/players/{account_id}</li>'+
+    '<li>Restriction: ~1 call per second'+
+    '</ul>'
   }
 ]
 
@@ -200,7 +215,6 @@ function domLoaded(){
           }
       }
   }
-
  
 
   function getAppData(){
@@ -216,7 +230,13 @@ function domLoaded(){
       })
       // api-info
       $('.api-info-button').click(function(){
-        getAppAboutApi();
+        if(state === 3){
+          moveRight();
+          setTimeout(getAppAboutApi,800);
+        }
+        else{
+          getAppAboutApi();
+        }
         state = 5;
         console.log('state', state);
       })

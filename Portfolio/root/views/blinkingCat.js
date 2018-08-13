@@ -8,16 +8,24 @@
 function blinkingCat(){
 	// var isBlinking = false;
 	// State of cat, starts by not blinking
-	var naturalTime = 3350*getRandomInt(3);
-	// get a random time(in miliseconds) for our cat to start blinking
-    let cat = setInterval(changeState,naturalTime);
+	var naturalTime = 3350*getRandomInt(2);
+	// get a cvasi-random time(in miliseconds) for our cat to start blinking ; multiple of 3350 for animation to complete smoothly, takes around 3350ms for cat to blink 3 times
+    let cat = setInterval(changeState, 3350 + naturalTime);
 
     function changeState(){
-      var eyes = document.getElementById('cat-eyes');
-      console.log(eyes.src);
-      eyes.src = eyes.src === "file:///C:/Workspace/personalCV/Master/Portfolio/root/assets/images/cat-eyes-still.png" ? "file:///C:/Workspace/personalCV/Master/Portfolio/root/assets/images/cat-eyes-gif.gif" : "file:///C:/Workspace/personalCV/Master/Portfolio/root/assets/images/cat-eyes-still.png";
+      	var eyes = document.getElementById('cat-eyes');
+     	console.log('Cat was last in state: ', eyes.src);
+      	eyes.src = eyes.src === "file:///C:/Workspace/personalCV/Master/Portfolio/root/assets/images/cat-eyes-still.png" ? "file:///C:/Workspace/personalCV/Master/Portfolio/root/assets/images/cat-eyes-gif.gif" : "file:///C:/Workspace/personalCV/Master/Portfolio/root/assets/images/cat-eyes-still.png";
+		function stopBlinking(){
+       
+			document.getElementById('background-image').addEventListener('click', function(){
+				eyes.src = "file:///C:/Workspace/personalCV/Master/Portfolio/root/assets/images/cat-eyes-still.png";
+				clearInterval(cat);
+				})
+  		}
+  		stopBlinking(); 	
   	}
-
+  	
 
 
       // if(isBlinking == false){
