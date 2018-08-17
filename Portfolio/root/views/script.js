@@ -24,7 +24,7 @@ var app_info = [
     name: 'gamesList',
     about:
     '<ul>' +
-    "<li>Web application that interacts with a collection of games, received from a private API.</li>" + 
+    "<li>Web application that interacts with a collection of games, requested with a private API.</li>" + 
     '<li>Has CRUD functionality.</li>'+
     '<li>Individual display of elements. </li>'+
     "<li class='mobile-friendly'>Mobile Friendly: Yes</li>" +
@@ -32,16 +32,16 @@ var app_info = [
     short_url: '../../external/gamesList/templates/games.html',
     api_description: 
     '<ul>' +
-    '<li>Has 10 game objects in initial state. Can be updated/deleted. Collection can be empty.</li>'+
-    '<li>Postman collection: https://www.getpostman.com/collections/df971fc1c71c76ba2aa1</li>' + 
+    '<li>Collection has 10 game objects in initial state. Can be updated/deleted. Can be empty.</li>'+
+    '<li>Postman collection: getpostman.com/collections/df971fc1c71c76ba2aa1</li>' + 
     '<li>Regenerates collection: https://games-world.herokuapp.com/regenerate-games</li>'+
     '</ul>'
   },
   {
     name: 'dota',
     about: '<ul>' +
-    '<li>Web application, calls a public API that holds game-related information. </li>'+
     '<li>DOTA 2 is a popular strategy game with hundreds of pro and semi-pro teams around the world.</li>'+
+    '<li>Application calls a public API to display team-related information. </li>'+
     "<li>Displays all notable players of a selected team. Links to each player's Steam profile.</li>"+
     '<li>App has nested calls and uses Session Storage to hold collections once they are received.</li>'+
     "<li class='mobile-friendly'>Mobile Friendly: No</li>"+
@@ -105,18 +105,18 @@ function domLoaded(){
    });
 
   
-  // HTML keeper for app information, bottom right side of the screen
+  // HTML keeper for app information, bottom side of the screen
   var container = document.getElementsByClassName('right')[0];
 
   
-
+  // Clears bottom side of the screen
   function clearDescription() {
      while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
   }
   
-  // Creates a logo of the app
+  // Creates a logo of the app selected
   function createLogo(appName){
     let imageUrl = '../assets/images/' + appName + '.png';
     let image = document.createElement('img');
@@ -126,8 +126,8 @@ function domLoaded(){
     container.appendChild(image);
   }
   
-  // links  'about', 'open app'  buttons in bottom half -> to the app requested by the user :see below 
-  // formats pages
+  // names  'about', 'open app'  buttons in bottom half -> for linking to the app requested by the user :see below 
+  // 
   
   function animateApp(app_name){
     $('.about').attr('name' , app_name);
@@ -165,7 +165,7 @@ function domLoaded(){
   
  
 
-   // Clicking 'about' and 'api info'
+   // Clicking 'about' and 'api info' populates screen with info from 'app_info' array
   function populateAboutScreen(app){
     clearDescription();
     var description = document.createElement('h3');

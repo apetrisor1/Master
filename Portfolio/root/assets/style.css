@@ -60,7 +60,7 @@ h3{
 #about-me, #portfolio {
   width: 15%;
   text-indent: 5%;
-  font-size: 1.6em;
+  font-size: 1.35em;
   border-bottom: 1px outset transparent;
   border-left: 2px outset transparent;
   font-family: source sans pro,georgia,serif;
@@ -269,13 +269,13 @@ p:hover {
      margin-top: 5%;
   }
   #about-me, #portfolio {
-    width: 33%;
+    width: 40%;
   }
   #about-me {
     margin-top: 5%;
   }
   .flex-container {
-    margin-top: 30%;
+    margin-top: 33%;
     flex-direction: column;
     background-color: #f1dcc9;
   }
@@ -283,7 +283,7 @@ p:hover {
     display: block;
     box-sizing: border-box;
     margin-left: 5%;
-    height: 4%;
+    height: 3%;
     margin-top: -1%;
     font-size: 75%;
     margin-bottom: 0%;
@@ -292,5 +292,22 @@ p:hover {
   }
   .column:hover {
     background-color: #fff;
+  }
+  .columns-wrapper{
+    height: 105%;
+  }
+  ul{
+    font-size: 85%;
+  }
+  .navigation, .column {
+    font-size: 90%;
+  }
+  .cat-eyes {
+    margin-top: 16.3%;
+    margin-left: 20.41%;
+    width:12%;
+  }
+  .background-image {
+    width: 40%;
   }
 }
