@@ -4,8 +4,8 @@
   "description": "Simple Parcel Sandbox",
   "main": "homepage.html",
   "scripts": {
-    "start": "parcel homepage.html --open",
-    "build": "parcel build homepage.html"
+    "start": "parcel Portfolio/root/templates/homepage.html --open",
+    "build": "parcel build Portfolio/root/templates/homepage.html.html"
   },
   "dependencies": {},
   "devDependencies": {
