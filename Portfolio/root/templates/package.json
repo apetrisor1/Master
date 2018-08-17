@@ -2,10 +2,10 @@
   "name": "parcel-sandbox",
   "version": "1.0.0",
   "description": "Simple Parcel Sandbox",
-  "main": "index.html",
+  "main": "homepage.html",
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "start": "parcel homepage.html --open",
+    "build": "parcel build homepage.html"
   },
   "dependencies": {},
   "devDependencies": {
