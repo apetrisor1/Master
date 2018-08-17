@@ -2,7 +2,7 @@
   "name": "parcel-sandbox",
   "version": "1.0.0",
   "description": "Simple Parcel Sandbox",
-  "main": "homepage.html",
+  "main": "./root/templates/homepage.html",
   "scripts": {
     "start": "parcel ./root/templates/homepage.html --open",
     "build": "parcel build ./root/templates/homepage.html"
