@@ -5,7 +5,7 @@
   "main": "homepage.html",
   "scripts": {
     "start": "parcel Portfolio/root/templates/homepage.html --open",
-    "build": "parcel build Portfolio/root/templates/homepage.html.html"
+    "build": "parcel build Portfolio/root/templates/homepage.html"
   },
   "dependencies": {},
   "devDependencies": {
