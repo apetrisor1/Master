@@ -1,0 +1,14 @@
+{
+  "name": "parcel-sandbox",
+  "version": "1.0.0",
+  "description": "Simple Parcel Sandbox",
+  "main": "homepage.html",
+  "scripts": {
+    "start": "parcel Portfolio/root/templates/homepage.html --open",
+    "build": "parcel build Portfolio/root/templates/homepage.html"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.6.1"
+  }
+}
