@@ -184,9 +184,35 @@ p:hover {
   }
   .item{
     padding: 10px;
+    min-height: 3vh;
   }
   .flex-container{
     margin-bottom: 10%;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .item{
+    flex-basis: 15%;
+    min-height: 5vh;
+  }
+ .item:nth-of-type(1){
+    flex-basis: 11%;
+  }
+  .item:nth-of-type(2){
+    flex-basis: 15%;
+  }
+  .item:nth-of-type(3){
+    flex-basis: 13%;
+  }
+  .item:nth-of-type(4){
+    flex-basis: 12%;
+    margin-right: 25%;
+  }
+  #linkedin-icon{
+    position: relative;
+    top: 9em;
+    left: 35em;
+    width: 3%;
   }
 }
 
@@ -274,5 +300,11 @@ p:hover {
   }
   p:nth-of-type(3){
     margin-top: 1.8vh;
+  }
+   #linkedin-icon{
+    position: relative;
+    top: 8em;
+    left: 13em;
+    width: 9%;
   }
 }

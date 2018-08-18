@@ -26,7 +26,7 @@ window.addEventListener("load", function() {
   $('#refresh-titles').click( function() {
     console.log('refreshed');
     window.open("https://games-world.herokuapp.com/regenerate-games", "dummyframe");
-    setTimeout(location.reload(),300);
+    setTimeout(function(){location.reload()},1000);
 })
   
   var containerAll = document.getElementById('all-games-list');
@@ -70,7 +70,7 @@ window.addEventListener("load", function() {
          myGames.forEach(function(gameObj){  // addGame() adds each of our personal games to the collection
                            addGame(gameObj);
          });
-         setTimeout(location.reload(),300);
+         setTimeout(function(){location.reload()},1000);
     });
   
     
@@ -109,7 +109,7 @@ window.addEventListener("load", function() {
                                                                                               });            
                                                    }
                                                }
-                                             location.reload();
+                                             setTimeout(function(){location.reload()},1000);
                                              }
                                          })   
   // cancels update operation
@@ -135,7 +135,7 @@ window.addEventListener("load", function() {
                                                 var apiUrl = 'https://games-world.herokuapp.com/games/' + game._id; 
                                                 gameToDelete.deleteGame(apiUrl);
                                               }
-                                           location.reload();
+                                           setTimeout(function(){location.reload()},1000);
                                           }
                                         })
     } // END of delete function

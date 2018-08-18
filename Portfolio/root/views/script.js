@@ -253,7 +253,14 @@ function domLoaded(){
   }
   openApp();
 
- 
+  // Function that goes to LinkedIn
+
+  function linkedIn(){
+    $('#linkedin-icon').click(function(){
+      window.open('https://www.linkedin.com/in/adrian-petrisor-103/', "_blank");
+    })
+  }
+  linkedIn();
 
  
 
