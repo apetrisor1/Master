@@ -14,7 +14,7 @@ var app_info = [
     about: 
     '<ul>' +
     "<li>Player pics hand, computer gets a random hand. Shows winner.</li>" +
-    '<li>Console logs a pseudo-random distribution of 100 hands </li>' +
+    '<li>Console logs a pseudo-random distribution of 100 hands.</li>' +
     '</ul>',
     short_url: `../../external/rockPaperScissors/rockPaperScissors.html`,
   },
@@ -114,7 +114,7 @@ function domLoaded(){
   
   // Creates a logo of the app selected
   function createLogo(appName){
-    let imageUrl = '../assets/images/' + appName + '.png';
+    let imageUrl = 'Portfolio/root/assets/images/' + appName + '.png';
     let image = document.createElement('img');
     image.setAttribute('class', `logo ${appName}_logo`);
     image.setAttribute('id','logo');
