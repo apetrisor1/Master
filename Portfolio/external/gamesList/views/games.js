@@ -7,7 +7,7 @@
                    "description": "Assetto Corsa (Italian for 'racing setup') is a sim racing video game developed by the Italian video game developer Kunos Simulazioni. It is designed with an emphasis on a realistic racing experience with support for extensive customization and moddability.",
                    "genre": "Racing Sim",
                    "publisher": "	Kunos Simulazioni",
-                   "imageUrl": "https://www.pcgamesn.com/sites/default/files/assettocorsa99235.jpg"
+                   "imageUrl": "https://www.gtplanet.net/wp-content/uploads/2016/05/Assetto-Corsa-Japanese-Car-Pack-RX-7-4-860x484.jpg"
                  },
                  {
                    "title": "DOTA 2",

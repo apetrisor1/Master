@@ -6,7 +6,6 @@ var app_info = [
     '<li>Input form with mandatory <strong>first</strong> and <strong>last name</strong> fields.</li>' +
     '<li>On submit, information is logged to console.</li>' +
     '<li>Customer gets overhead banner, clear resets form.</li>' +
-    "<li class='mobile-friendly'>Mobile Friendly: Yes</li>" +
     '</ul>',
     short_url: `../../external/inputForm/form.html`,
   },
@@ -16,7 +15,6 @@ var app_info = [
     '<ul>' +
     "<li>Player pics hand, computer gets a random hand. Shows winner.</li>" +
     '<li>Console logs a pseudo-random distribution of 100 hands </li>' +
-    "<li class='mobile-friendly'>Mobile Friendly: Yes</li>" +
     '</ul>',
     short_url: `../../external/rockPaperScissors/rockPaperScissors.html`,
   },
@@ -27,13 +25,12 @@ var app_info = [
     "<li>Web application that interacts with a collection of games, requested with a private API.</li>" + 
     '<li>Has CRUD functionality.</li>'+
     '<li>Individual display of elements. </li>'+
-    "<li class='mobile-friendly'>Mobile Friendly: Yes</li>" +
     '</ul>',
     short_url: '../../external/gamesList/templates/games.html',
     api_description: 
     '<ul>' +
     '<li>Collection has 10 game objects in initial state. Can be updated/deleted. Can be empty.</li>'+
-    '<li>Postman collection: getpostman.com/collections/df971fc1c71c76ba2aa1</li>' + 
+    '<li>Games collection: https://games-world.herokuapp.com/games</li>'+
     '<li>Regenerates collection: https://games-world.herokuapp.com/regenerate-games</li>'+
     '</ul>'
   },
@@ -44,15 +41,14 @@ var app_info = [
     '<li>Application calls a public API to display team-related information. </li>'+
     "<li>Displays all notable players of a selected team. Links to each player's Steam profile.</li>"+
     '<li>App has nested calls and uses Session Storage to hold collections once they are received.</li>'+
-    "<li class='mobile-friendly'>Mobile Friendly: No</li>"+
     '</ul>',
     short_url: `../../external/dota2/dota2.html`,
     api_description: '<ul>' +
     '<li>Documentation: https://docs.opendota.com/</li>'+
     '<li>GET calls used: </li>'+
-    '<li>Teams: api.opendota.com/api/teams/{team_id}</li>'+
-    '<li>Players of a team: api.opendota.com/api/teams/{team_id}/players</li>'+
-    '<li>Player: https://api.opendota.com/api/players/{account_id}</li>'+
+    '<li>api.opendota.com/api/teams/{team_id}</li>'+
+    '<li>api.opendota.com/api/teams/{team_id}/players</li>'+
+    '<li>api.opendota.com/api/players/{account_id}</li>'+
     '<li>Restriction: ~1 call per second'+
     '</ul>'
   }
@@ -168,14 +164,14 @@ function domLoaded(){
    // Clicking 'about' and 'api info' populates screen with info from 'app_info' array
   function populateAboutScreen(app){
     clearDescription();
-    var description = document.createElement('h3');
+    var description = document.createElement('div');
     description.setAttribute('class' , 'app-info');
     description.innerHTML = app.about;
     container.appendChild(description);
   }
   function populateApiScreen(app){
       clearDescription();
-      var aboutApi = document.createElement('h3');
+      var aboutApi = document.createElement('div');
       aboutApi.setAttribute('class' , 'api-description');
       aboutApi.innerHTML = app.api_description;
       container.appendChild(aboutApi);
@@ -210,7 +206,7 @@ function domLoaded(){
             clearInterval(move);
           } else {
             pos++; 
-            logo.style.left = pos/10 + '%'; 
+            logo.style.left = 22 + pos/10 + '%'; 
             logo.style.opacity = 1 - pos/160;
           }
       }
