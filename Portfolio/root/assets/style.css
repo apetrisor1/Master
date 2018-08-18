@@ -232,8 +232,22 @@ p:hover {
     width: 3%;
   }
 }
-
 @media screen and (max-width: 800px) {
+  #linkedin-icon{
+    position: relative;
+    top: 10em;
+    left: 7em;
+    width: 7%;
+  }
+  #github-icon{
+    position: relative;
+    top: 10em;
+    left: 13em;
+    width: 7%;
+  }
+}
+
+@media screen and (max-width: 420px) {
  h1 {
     text-indent: -50%;
   }
