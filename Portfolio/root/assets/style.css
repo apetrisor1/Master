@@ -235,15 +235,15 @@ p:hover {
 @media screen and (max-width: 800px) {
   #linkedin-icon{
     position: relative;
-    top: 10em;
-    left: 7em;
-    width: 7%;
+    top: 1.75em;
+    left: 14.5em;
+    width: 4%;
   }
   #github-icon{
     position: relative;
-    top: 10em;
-    left: 13em;
-    width: 7%;
+    top: 1.75em;
+    left: 18em;
+    width: 4%;
   }
 }
 
