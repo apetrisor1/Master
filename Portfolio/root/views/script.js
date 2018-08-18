@@ -7,7 +7,7 @@ var app_info = [
     '<li>On submit, information is logged to console.</li>' +
     '<li>Customer gets overhead banner, clear resets form.</li>' +
     '</ul>',
-    short_url: `../../external/inputForm/form.html`,
+    short_url: `Portfolio/external/inputForm/form.html`,
   },
   {
     name: 'rockPaperScissors',
@@ -16,7 +16,7 @@ var app_info = [
     "<li>Player pics hand, computer gets a random hand. Shows winner.</li>" +
     '<li>Console logs a pseudo-random distribution of 100 hands.</li>' +
     '</ul>',
-    short_url: `../../external/rockPaperScissors/rockPaperScissors.html`,
+    short_url: `Portfolio/external/rockPaperScissors/rockPaperScissors.html`,
   },
   {
     name: 'gamesList',
@@ -26,7 +26,7 @@ var app_info = [
     '<li>Has CRUD functionality.</li>'+
     '<li>Individual display of elements. </li>'+
     '</ul>',
-    short_url: '../../external/gamesList/templates/games.html',
+    short_url: 'Portfolio/external/gamesList/templates/games.html',
     api_description: 
     '<ul>' +
     '<li>Collection has 10 game objects in initial state. Can be updated/deleted. Can be empty.</li>'+
@@ -42,7 +42,7 @@ var app_info = [
     "<li>Displays all notable players of a selected team. Links to each player's Steam profile.</li>"+
     '<li>App has nested calls and uses Session Storage to hold collections once they are received.</li>'+
     '</ul>',
-    short_url: `../../external/dota2/dota2.html`,
+    short_url: `Portfolio/external/dota2/dota2.html`,
     api_description: '<ul>' +
     '<li>Documentation: https://docs.opendota.com/</li>'+
     '<li>GET calls used: </li>'+
