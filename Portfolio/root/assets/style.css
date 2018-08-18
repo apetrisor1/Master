@@ -233,7 +233,7 @@ p:hover {
   }
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 420px) {
  h1 {
     text-indent: -50%;
   }
