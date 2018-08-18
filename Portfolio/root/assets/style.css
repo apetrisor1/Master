@@ -332,17 +332,6 @@
       height: 520px;
     }
 }
-/*@media only screen 
-    and (min-width:800px) 
-    and (max-width:830px)
-    and (orientation: landscape){
-    #github-icon{
-      top: 35vh;
-    }
-    #linkedin-icon{
-      top: 25vh;
-    }
-}*/
 
 /* IPHONE 6 7 8 PLUS landscape*/
 @media only screen 
@@ -370,7 +359,7 @@
     }
 }
 
-/* IPHONE 6 7 8 PLUS Portrait*/
+/* IPHONE 6 7 8 PLUS portrait*/
 @media screen and (max-width:600px){
   #github-icon {
     position: relative;
@@ -393,7 +382,7 @@
 
 } 
 
-/* IPHONE X PORTRAIT */
+/* IPHONE X portrait */
 @media only screen
     and (max-width:415px)
     and (min-width:375px)
@@ -407,18 +396,24 @@
     }
  }
 
+/* IPHONE 5 portrait*/
 @media screen and (max-width:330px){
   #linkedin-icon {
-    top: 6.8em;
+    top: 7.5em;
     left: 10.75em;
     width: 9%;
+    margin-bottom: 4%;
+  }
+  #github-icon{
+    top: 7.5em;
+    margin-bottom: 4%;
   }
   ul{
-    font-size: 0.7em;
+    font-size: 0.85em;
   }
 }
 
-/* IPHONE 5 LANDSCAPE*/
+/* IPHONE 5 landscape*/
 @media only screen 
     and (max-width:569px) 
     and (orientation: landscape){
@@ -430,8 +425,6 @@
       height: 550px;
    }
 }
-
-
 
 @media screen and (min-width: 416px){
   description{
@@ -484,7 +477,7 @@
   }
 }
 
-/*IPAD PORTRAIT*/
+/*IPAD portrait*/
 @media only screen 
     and (min-width:767px)
     and (max-width:769px)
@@ -511,7 +504,7 @@
       }
 }
 
-/*IPAD LANDSCAPE*/
+/*IPAD landscape*/
   @media only screen 
     and (min-width:1023px)
     and (max-width:1025px)
@@ -524,7 +517,7 @@
       }
     }
 
-/*IPAD PRO PORTRAIT*/
+/*IPAD PRO portrait*/
  @media only screen 
     and (min-width:1023px)
     and (max-width:1025px)
@@ -545,6 +538,7 @@
       }
     }
 
+ /*IPAD PRO landscape*/
  @media only screen 
     and (min-width: 1366px){
       #linkedin-icon{
@@ -554,5 +548,8 @@
       #github-icon{
         width: 3%;
         left: 55.75% ;
+      }
+      description{
+        margin-top: 6%;
       }
     }
