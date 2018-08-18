@@ -1,253 +1,221 @@
 /* general styles */
-*{
-  box-sizing: border-box;
-}
-strong{
-  font-weight: 400;
-}
+  *{
+    box-sizing: border-box;
+  }
+  strong{
+    font-weight: 400;
+  }
 
-body {
-  font-family: source sans pro,arial,sans-serif;
-  color: #231b12;
-  font-weight: 400;
-}
-imageholder {
-  position: relative;
-  top: 3.5%;
-  z-index: -1;
-  display: block;
-}
-#linkedin-icon:hover, #github-icon:hover{
-  cursor: pointer;
-}
+  body {
+    font-family: source sans pro,arial,sans-serif;
+    color: #231b12;
+    font-weight: 400;
+  }
+  imageholder {
+    position: relative;
+    top: 3.5%;
+    z-index: -1;
+    display: block;
+  }
+  #linkedin-icon:hover, #github-icon:hover{
+    cursor: pointer;
+  }
+  #github-icon, #linkedin-icon {
+    width: 4%;
+  }
 
-h3{
-  font-weight: 300;
-}
-ul{
-  width: 95%;
-}
+  h3{
+    font-weight: 300;
+  }
+  ul{
+    width: 95%;
+  }
 
-.wrapper {
-  width: 100%;
-  height: 112vh;
-  text-align: center;
-  border-top: 1px outset #f56c57;
-  border-left: 2px outset #f56c57;
-}
-.columns-wrapper {
-  width: 80%;
-  margin: 0 auto;
-  height: 98vh;
-  margin-top: 5%;
-  border: 1px outset #231b12;
-}
+  .wrapper {
+    width: 100%;
+    height: 112vh;
+    text-align: center;
+    border-top: 1px outset #f56c57;
+    border-left: 2px outset #f56c57;
+  }
+  .columns-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    height: 700px;
+    margin-top: 5%;
+    border: 1px outset #231b12;
+  }
 
-.background-image {
-  display: inline-block;
-  float: right;
-  position: relative;
-  top: 4.5%; right: 1%; z-index: -1;
-}
+  .background-image {
+    display: inline-block;
+    float: right;
+    position: relative;
+    top: 4.5%; right: 1%; z-index: -1;
+  }
 
-.cat-eyes {
-  position: absolute;
-  z-index: 1;
-  margin-top: 6.3%;
-  margin-left: 38.41%;
-}
-#about-me {
-  margin-top: 2%;
-}
-#portfolio {
-  margin-top: 1%;
-}
-#about-me, #portfolio {
-  width: 20%;
-  text-indent: 5%;
-  font-size: 1.35em;
-  border-bottom: 1px outset transparent;
-  border-left: 2px outset transparent;
-  font-family: source sans pro,georgia,serif;
-}
-#about-me:hover, #portfolio:hover {
-  cursor: pointer;
-  border-bottom: 1px outset #f56c57;
-  border-left: 2px outset #f56c57;
-  transition: 1s;
-  text-indent: 6%;
-}
-
-
-.flex-container {
-  background-color: #fff;
-  display: none;
-  margin-top: 20%;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.item{
-  background-color: #f1dcc9;
-  border-bottom: 1px outset transparent;
-  border-left: 2px outset transparent;
-  box-shadow: 2px 2px #edf2f9;
-}
-
-.item:hover{
-  background-color: #fff;
-  border-bottom: 1px inset #f56c57;
-  border-left: 2px outset #f56c57;
-  transition: 1s;
-  box-shadow: 0px 0px;
-  cursor: pointer;
-}
-.item:not(:hover){
-  transition: 2s;
-}
-
-#inputForm{
-}
-#input-form-button-text{
-}
-#rockPaperScissors{
-}
-#rock-paper-scissors-button-text{
-}
-#gamesList{
-}
-#games-list-button-text{
-}
-#dota{
-}
-#dota-button-text{
-}
-
-description{
-  display:none;
-  width: 100%;
-  position: relative;
-}
-
-.aside {
-  display:none;
-  height: 100%;
-}
-
-#left {
-  position:absolute;
-  left: 0px;
-  width: 20%;
-  transition: 3s;
-}
-
-#right {
-  position: absolute;
-  right: 0px;
-  width: 80%;
-  transition:2s;
-}
-
-.open-app, .about, .api-info-button {
-  width: 100%;
-  margin-left: 10.5%; 
-  border-bottom: 1px solid transparent;
-  border-left: 2px solid transparent;
-}
-.about {
-  margin-top: 5.5%;
-}
-.open-app:hover, .about:hover, .api-info-button:hover {
-  cursor: pointer;
-  border-bottom: 1px outset #f56c57;
-  border-left: 2px outset #f56c57;
-  transition: 1s;
-}
-.open-app:not(:hover), .about:not(:hover), .api-info-button:not(:hover) {
-  transition: 1s;
-}
-
-.app-info, .api-description {
-  line-height: 1.75em;
-  margin-left: 11%;
-  font-weight: 300;
-  text-align: justify;
-}
-
-.api-info-button {
-  display:none;
-}
+  .cat-eyes {
+    position: absolute;
+    z-index: 1;
+    margin-top: 6.3%;
+    margin-left: 38.41%;
+  }
+  #about-me {
+    margin-top: 2%;
+  }
+  #portfolio {
+    margin-top: 1%;
+  }
+  #about-me, #portfolio {
+    width: 20%;
+    text-indent: 5%;
+    font-size: 1.35em;
+    border-bottom: 1px outset transparent;
+    border-left: 2px outset transparent;
+    font-family: source sans pro,georgia,serif;
+  }
+  #about-me:hover, #portfolio:hover {
+    cursor: pointer;
+    border-bottom: 1px outset #f56c57;
+    border-left: 2px outset #f56c57;
+    transition: 1s;
+    text-indent: 6%;
+  }
 
 
-p {
-  font-size: 0.95em;
-}
-p:hover {
-  cursor: pointer;
-}
+  .flex-container {
+    background-color: #fff;
+    display: none;
+    margin-top: 20%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
-@media screen and (min-width: 980px){
+  .item{
+    background-color: #f1dcc9;
+    border-bottom: 1px outset transparent;
+    border-left: 2px outset transparent;
+    box-shadow: 2px 2px #edf2f9;
+  }
 
+  .item:hover{
+    background-color: #fff;
+    border-bottom: 1px inset #f56c57;
+    border-left: 2px outset #f56c57;
+    transition: 1s;
+    box-shadow: 0px 0px;
+    cursor: pointer;
+  }
+  .item:not(:hover){
+    transition: 2s;
+  }
+
+
+  description{
+    display:none;
+    width: 100%;
+    position: relative;
+  }
+
+  .aside {
+    display:none;
+    height: 100%;
+  }
+
+  #left {
+    position:absolute;
+    left: 0px;
+    width: 20%;
+    transition: 3s;
+  }
+
+  #right {
+    position: absolute;
+    right: 0px;
+    width: 80%;
+    transition:2s;
+  }
+
+  .open-app, .about, .api-info-button {
+    width: 100%;
+    margin-left: 10.5%; 
+    border-bottom: 1px solid transparent;
+    border-left: 2px solid transparent;
+  }
+  .about {
+    margin-top: 5.5%;
+  }
+  .open-app:hover, .about:hover, .api-info-button:hover {
+    cursor: pointer;
+    border-bottom: 1px outset #f56c57;
+    border-left: 2px outset #f56c57;
+    transition: 1s;
+  }
+  .open-app:not(:hover), .about:not(:hover), .api-info-button:not(:hover) {
+    transition: 1s;
+  }
+
+  .app-info, .api-description {
+    line-height: 1.75em;
+    margin-left: 11%;
+    font-weight: 300;
+    text-align: justify;
+  }
+
+  .api-info-button {
+    display:none;
+  }
   #logo {
     position:absolute;
     left: 22%;
     width: 10%;
   }
-  .item{
-    padding: 10px;
-    min-height: 3vh;
+  p {
+    font-size: 0.95em;
   }
-  .flex-container{
-    margin-bottom: 10%;
-    justify-content: space-around;
-    align-items: flex-start;
+  p:hover {
+    cursor: pointer;
   }
-  .item{
-    flex-basis: 15%;
-    min-height: 5vh;
-  }
- .item:nth-of-type(1){
-    flex-basis: 11%;
-  }
-  .item:nth-of-type(2){
-    flex-basis: 15%;
-  }
-  .item:nth-of-type(3){
-    flex-basis: 13%;
-  }
-  .item:nth-of-type(4){
-    flex-basis: 12%;
-    margin-right: 25%;
-  }
+
   #linkedin-icon{
     position: relative;
     top: 15em;
-    left: 54%;
-    width: 3%;
-  }
-   #github-icon{
-    position: relative;
-    top: 12.5em;
-    left: 57.25%;
-    width: 3%;
-  }
-}
-@media screen and (max-width: 800px) {
-  #linkedin-icon{
-    position: relative;
-    top: 1.75em;
-    left: 14.5em;
+    left: 52.5%;
     width: 4%;
   }
   #github-icon{
     position: relative;
-    top: 1.75em;
-    left: 18em;
+    top: 12.5em;
+    left: 57%;
     width: 4%;
   }
 }
+@media screen and (max-width: 813px) {
+  .columns-wrapper{
+    height: 520px;
+    width: 96%;
+  }
+  #linkedin-icon{
+    position: relative;
+    top: 6.35em;
+    left: 19.25em;
+    width: 4%;
+  }
+  #github-icon{
+    position: relative;
+    top: 6.35em;
+    left: 19em;
+    width: 4%;
+  }
+  #logo {
+    margin-right: 72%;
+    width: 15%;
+  }
+  description{
+    top: 4%;
+  }
+}
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width:415px) {
  h1 {
     text-indent: -50%;
   }
@@ -259,7 +227,6 @@ p:hover {
   }
   .columns-wrapper {
     width: 96%;
-    height: 40.5em;
   }
   .cat-eyes {
     margin-top: 16.3%;
@@ -323,8 +290,8 @@ p:hover {
   #logo {
     position:absolute;
     left: 22%;
-    width: 20%;
     top: 0%;
+    width: 20%;
   }
   p:nth-of-type(1){
     margin-top: 1vh;
@@ -335,23 +302,64 @@ p:hover {
   p:nth-of-type(3){
     margin-top: 1.8vh;
   }
-   #linkedin-icon{
+  #linkedin-icon{
     position: relative;
-    top: 8em;
-    left: 8em;
+    top: 19.2vh;
+    left: 18.2vh;
     width: 9%;
   }
   #github-icon{
     position: relative;
-    top: 8em;
-    left: 13em;
+    top: 19.2vh;
+    left: 29.2vh;
     width: 9%;
   }
 }
 @media screen and (max-width:330px){
   #linkedin-icon {
-    top: 6.5em;
-    left: 12em;
+    top: 6.8em;
+    left: 10.75em;
     width: 9%;
+  }
+}
+
+
+@media screen and (min-width: 416px){
+  description{
+    top: 5%;
+  }
+  #linkedin-icon{
+    position: relative;
+    top: 20vh;
+    left: 52.45%;
+    width: 4%;
+  }
+  #github-icon{
+    position: relative;
+    top: 28vh;
+    left: 57%;
+    width: 4%;
+  }
+
+}
+
+
+@media screen and (min-width: 980px){
+  
+  .item:nth-of-type(1){
+    flex-basis: 11%;
+  }
+  .item:nth-of-type(2){
+    flex-basis: 15%;
+  }
+  .item:nth-of-type(3){
+    flex-basis: 13%;
+  }
+  .item:nth-of-type(4){
+    flex-basis: 12%;
+    margin-right: 25%;
+  }
+  description{
+    top: 10%;
   }
 }
