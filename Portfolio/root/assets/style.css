@@ -38,7 +38,7 @@ ul{
 .columns-wrapper {
   width: 80%;
   margin: 0 auto;
-  height: 99vh;
+  height: 98vh;
   margin-top: 5%;
   border: 1px outset #231b12;
 }
@@ -245,6 +245,7 @@ p:hover {
   }
   .columns-wrapper {
     width: 96%;
+    height: 40.5em;
   }
   .cat-eyes {
     margin-top: 16.3%;
@@ -334,9 +335,6 @@ p:hover {
   }
 }
 @media screen and (max-width:330px){
-  .columns-wrapper {
-    height: 115vh;
-  }
   #linkedin-icon {
     top: 6.5em;
     left: 12em;
