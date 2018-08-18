@@ -362,11 +362,11 @@
     and (max-width:680px) 
     and (orientation: landscape){
     .wrapper{
-      height: 142vh;
+      height: 143vh;
     }
     .columns-wrapper{
       width: 96%;
-      height: 500px;
+      height: 505px;
     }
 }
 
@@ -534,5 +534,17 @@
       #github-icon{
         top: 7vh;
         left: 54%;
+      }
+    }
+
+ @media only screen 
+    and (min-width: 1366px){
+      #linkedin-icon{
+        top: 22vh;
+        width: 3%;
+        }
+      #github-icon{
+        width: 3%;
+        left: 55.75% ;
       }
     }
