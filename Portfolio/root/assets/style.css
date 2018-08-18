@@ -373,16 +373,23 @@
 @media screen and (max-width:600px){
   #github-icon {
     position: relative;
-    top: 19.2vh;
-    left: 29.2vh;
+    top: 21.2vh;
+    left: 38.2vh;
     width: 9%;
   }
   #linkedin-icon {
     position: relative;
-    top: 19.2vh;
-    left: 18.2vh;
+    top: 21.2vh;
+    left: 23.2vh;
     width: 9%;
   }
+  .wrapper{
+    height: 44.25em;
+  }
+  .columns-wrapper{
+    height: 43em;
+  }
+
 } 
 
 /* IPHONE X PORTRAIT */
