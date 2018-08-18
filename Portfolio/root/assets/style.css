@@ -189,6 +189,8 @@
     width: 4%;
   }
 }
+
+
 @media screen and (max-width: 813px) {
   .columns-wrapper{
     height: 520px;
@@ -215,6 +217,7 @@
   }
 }
 
+/* IPHONE 5 PORTRAIT*/
 @media screen and (max-width:415px) {
  h1 {
     text-indent: -50%;
@@ -226,7 +229,8 @@
     margin-top: 0;
   }
   .columns-wrapper {
-    width: 96%;
+    width: 98%;
+    height: 97.5%;
   }
   .cat-eyes {
     margin-top: 16.3%;
@@ -315,13 +319,110 @@
     width: 9%;
   }
 }
+
+/* IPHONE X landscape*/
+@media only screen 
+    and (max-width:820px) 
+    and (orientation: landscape){
+    .wrapper{
+      height: 150vh;
+    }
+    .columns-wrapper{
+      width: 98%;
+      height: 520px;
+    }
+}
+/*@media only screen 
+    and (min-width:800px) 
+    and (max-width:830px)
+    and (orientation: landscape){
+    #github-icon{
+      top: 35vh;
+    }
+    #linkedin-icon{
+      top: 25vh;
+    }
+}*/
+
+/* IPHONE 6 7 8 PLUS landscape*/
+@media only screen 
+    and (max-width:800px) 
+    and (orientation: landscape){
+    .wrapper{
+      height: 135.5vh;
+    }
+    .columns-wrapper{
+      width: 96%;
+      height: 525px;
+    }
+}
+
+/* IPHONE 6 7 8 landscape*/
+@media only screen 
+    and (max-width:680px) 
+    and (orientation: landscape){
+    .wrapper{
+      height: 142vh;
+    }
+    .columns-wrapper{
+      width: 96%;
+      height: 500px;
+    }
+}
+
+@media screen and (max-width:600px){
+  #github-icon {
+    position: relative;
+    top: 19.2vh;
+    left: 29.2vh;
+    width: 9%;
+  }
+  #linkedin-icon {
+    position: relative;
+    top: 19.2vh;
+    left: 18.2vh;
+    width: 9%;
+  }
+} 
+
+/* IPHONE X PORTRAIT */
+@media only screen
+    and (max-width:415px)
+    and (min-width:375px)
+    and (orientation: portrait){
+    .wrapper{
+      height: 43.25em;
+    }
+    .columns-wrapper{
+      width: 96%;
+      height: 42em;
+    }
+ }
+
 @media screen and (max-width:330px){
   #linkedin-icon {
     top: 6.8em;
     left: 10.75em;
     width: 9%;
   }
+  ul{
+    font-size: 0.7em;
+  }
 }
+
+/* IPHONE 5 LANDSCAPE*/
+@media only screen 
+    and (max-width:569px) 
+    and (orientation: landscape){
+    .wrapper{
+      height: 181vh;  
+    }
+    .columns-wrapper{
+      width: 96%;
+      height: 550px;
+   }
+}
+
 
 
 @media screen and (min-width: 416px){
@@ -340,26 +441,98 @@
     left: 57%;
     width: 4%;
   }
-
-}
-
-
-@media screen and (min-width: 980px){
-  
   .item:nth-of-type(1){
-    flex-basis: 11%;
+        flex-basis: 15%;
+      }
+      .item:nth-of-type(2){
+        flex-basis: 15%;
+      }
+      .item:nth-of-type(3){
+        flex-basis: 17%;
+      }
+      .item:nth-of-type(4){
+        flex-basis: 17%;
+        margin-right: 25%;
+      }
+
+}
+
+/* IPHONE X landscape logos*/
+@media only screen 
+    and (min-width:800px) 
+    and (max-width:850px)
+    and (orientation: landscape){
+    #linkedin-icon{
+    position: relative;
+    top: 9em;
+    left: 52.5%;
+    width: 4%;
   }
-  .item:nth-of-type(2){
-    flex-basis: 15%;
-  }
-  .item:nth-of-type(3){
-    flex-basis: 13%;
-  }
-  .item:nth-of-type(4){
-    flex-basis: 12%;
-    margin-right: 25%;
-  }
-  description{
-    top: 10%;
+  #github-icon{
+    position: relative;
+    top: 6.5em;
+    left: 57%;
+    width: 4%;
   }
 }
+
+/*IPAD PORTRAIT*/
+@media only screen 
+    and (min-width:767px)
+    and (max-width:769px)
+    and (orientation: portrait){      
+      .columns-wrapper{
+        height: 57vh;
+      }
+      .wrapper{
+        height: 61vh;
+      }
+      #linkedin-icon{
+         top: 7vh;
+         left: 42.45%;
+         width: 6%;
+      }
+      #github-icon{
+         top: 7vh;
+         left: 56.45%;
+         width: 6%;
+      }
+     
+      description{
+        top: 6%;
+      }
+}
+
+/*IPAD LANDSCAPE*/
+  @media only screen 
+    and (min-width:1023px)
+    and (max-width:1025px)
+    and (orientation: landscape){ 
+      .wrapper{
+        height: 37em;
+      }
+      .columns-wrapper{
+        height: 540px;
+      }
+    }
+
+/*IPAD PRO PORTRAIT*/
+ @media only screen 
+    and (min-width:1023px)
+    and (max-width:1025px)
+    and (orientation: portrait){ 
+      .wrapper{
+        height: 45vh;
+      }
+      .columns-wrapper{
+        height: 560px;
+      }
+      #linkedin-icon{
+        top: 7vh;
+        left: 43.45%;
+      }
+      #github-icon{
+        top: 7vh;
+        left: 54%;
+      }
+    }
