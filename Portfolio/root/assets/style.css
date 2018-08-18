@@ -370,11 +370,12 @@
     }
 }
 
+/* IPHONE 6 7 8 PLUS Portrait*/
 @media screen and (max-width:600px){
   #github-icon {
     position: relative;
     top: 21.2vh;
-    left: 38.2vh;
+    left: 36.2vh;
     width: 9%;
   }
   #linkedin-icon {
