@@ -262,7 +262,13 @@ function domLoaded(){
   }
   linkedIn();
 
- 
+  // Function that goes to Github
+  function Github(){
+    $('#github-icon').click(function(){
+      window.open('https://github.com/apetrisor1/apetrisor1.github.io', "_blank");
+    })
+  }
+  Github();
 
 
 }
