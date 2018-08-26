@@ -7,7 +7,6 @@
   }
 
 
-// Makes cat blink
 function blinkingCat(){
 
    	var naturalTime = 1110*getRandomInt(5);
@@ -16,7 +15,7 @@ function blinkingCat(){
 	// Execute changeState recursively, each time with a new random naturalTime
     var changeState = function() {
     	var eyes = document.getElementById('cat-eyes');
-     	console.log('Cat was last in state: salut ', eyes.src);
+     	console.log('Cat was last in state: ', eyes.src);
       eyes.src = eyes.src === "https://apetrisor1.github.io/Portfolio/root/assets/images/cat-eyes-still.png" ? "https://apetrisor1.github.io/Portfolio/root/assets/images/cat-eyes-gif.gif" : "https://apetrisor1.github.io/Portfolio/root/assets/images/cat-eyes-still.png";
     	naturalTime = 1110*getRandomInt(5);
 		setTimeout(changeState, naturalTime);

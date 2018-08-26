@@ -71,12 +71,14 @@ function showDescription(){
 function showPortfolio(){
   $('.flex-container').css('display','flex');
   $('.info').css('display','block');
+  $('bio').css('display','none');
 //   $('description').css('display','none')
 }
 function showAboutMe(){
-   $('.flex-container').css('display','none');
-   $('.info').css('display','none');
-   $('description').css('display','none')
+  $('bio').css('display','block');
+  $('.flex-container').css('display','none');
+  $('.info').css('display','none');
+  $('description').css('display','none')
 }
 
 
@@ -84,7 +86,16 @@ function showAboutMe(){
 $(domLoaded)
 function domLoaded(){
 
+  // Makes cat blink
   blinkingCat();
+
+  // Click on menu choices
+  $('#about-me').click(function(){
+      showAboutMe();
+      state=1;
+      console.log('state', state);
+      location.reload();
+   });
 
   $('#portfolio').click(function(){
       showPortfolio();
@@ -93,12 +104,12 @@ function domLoaded(){
       console.log('state', state);
   })
 
-   $('#about-me').click(function(){
-      showAboutMe();
-      state=1;
-      console.log('state', state);
-      location.reload();
-   });
+  $('#curriculum_vitae').click(function(){
+    showAboutMe();
+    state=1;
+    console.log('state', state);
+    $('bio').html('<iframe scrolling="no" src="portfolio/external/curriculum_vitae/index.html">iframe is not supported in your browser</iframe>');
+  })
 
   
   // HTML keeper for app information, bottom side of the screen
@@ -253,7 +264,7 @@ function domLoaded(){
   }
   openApp();
 
-  // Function that goes to LinkedIn
+  // LinkedIn icon
 
   function linkedIn(){
     $('#linkedin-icon').click(function(){
@@ -262,7 +273,7 @@ function domLoaded(){
   }
   linkedIn();
 
-  // Function that goes to Github
+  // Github icon
   function Github(){
     $('#github-icon').click(function(){
       window.open('https://github.com/apetrisor1/apetrisor1.github.io', "_blank");

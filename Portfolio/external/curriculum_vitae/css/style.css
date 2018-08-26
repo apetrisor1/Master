@@ -1,0 +1,113 @@
+@media only screen and (min-width: 100px){
+
+	* {
+		box-sizing: border-box;
+	}
+	a{
+		color: black;
+		text-decoration: none;
+	}
+	.font1em{
+		font-size: 1.1em;
+		width: 30%;
+	}
+	.font1em700{
+		font-size: 1.1em;
+		font-weight: 700;
+	}
+
+
+	body {
+		font-family: source sans pro,arial,sans-serif;
+		color: #231b12;
+		font-weight: 400;
+		position: relative;
+	}
+
+	wrapper{
+		display: block;
+		width: 292px;
+	}
+	table {
+		text-align: center;
+		font-size: 0.65em;
+	}
+	th {
+	}
+	td {
+		/*border: 1px solid red;*/
+		padding: 2px;
+	}
+	empty{
+		color: #fff;
+	}
+
+	spacer {
+		display: block;
+		height: 10vh;
+		background-color: black;
+		width: 50%;
+		margin-bottom: 8%;
+	}
+	
+	#facebook-logo {
+		margin-top: 3%;
+		float: left;
+		width: 8vh;
+	}
+
+	.flex-container{
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+		flex-direction: column;
+		margin-bottom: 8%;
+	}
+
+	flexItem{
+		flex-basis: 20%;
+		background-color: #f1dcc9;
+		padding: 1px;
+	    border-bottom: 1px outset transparent;
+	    border-left: 2px outset transparent;
+	    box-shadow: 2px 2px #edf2f9;
+	    font-size: 0.72em;
+	}
+	flexItem:hover{
+		background-color: #fff;
+	    border-bottom: 1px inset #f56c57;
+	    border-left: 2px outset #f56c57;
+	    transition: 1s;
+	    box-shadow: 0px 0px;
+	    cursor: pointer;
+	}
+
+
+	/*Related to each table*/
+	.contact-table, .work-table, .education-table{
+		display: none;
+	}
+	.education-table{
+		margin-left: 12%;
+	}
+
+	/*EXPERIENCE Table*/
+	.arrow{
+		width: 5%;
+	}
+	.left{
+		float:left;
+		margin-left: 5%;
+	}
+	.right{
+		float:right;
+		margin-right: 5%;
+		margin-bottom: 1px;
+	}
+	.job_period{
+		display: inline-block;
+		margin-bottom: 0; margin-top: 3px;
+		font-weight: 700;
+	}
+
+}

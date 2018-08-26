@@ -5,7 +5,10 @@
   strong{
     font-weight: 400;
   }
-
+  a{
+    text-decoration: none;
+    color:#231b12;
+  }
   body {
     font-family: source sans pro,arial,sans-serif;
     color: #231b12;
@@ -22,6 +25,14 @@
   }
   #github-icon, #linkedin-icon {
     width: 4%;
+  }
+  bio {
+    display: block;
+    height: 40%;
+    width: 85%;
+    position: absolute;
+    left: 7.5%;
+    top: 45%;
   }
 
   h3{
@@ -41,9 +52,10 @@
   .columns-wrapper {
     width: 80%;
     margin: 0 auto;
-    height: 700px;
+    height: 730px;
     margin-top: 5%;
     border: 1px outset #231b12;
+    position: relative;
   }
 
   .background-image {
@@ -62,18 +74,18 @@
   #about-me {
     margin-top: 2%;
   }
-  #portfolio {
+  #portfolio, #curriculum_vitae {
     margin-top: 1%;
   }
-  #about-me, #portfolio {
-    width: 20%;
+  #about-me, #portfolio, #curriculum_vitae {
+    width: 25%;
     text-indent: 5%;
     font-size: 1.35em;
     border-bottom: 1px outset transparent;
     border-left: 2px outset transparent;
     font-family: source sans pro,georgia,serif;
   }
-  #about-me:hover, #portfolio:hover {
+  #about-me:hover, #portfolio:hover, #curriculum_vitae:hover {
     cursor: pointer;
     border-bottom: 1px outset #f56c57;
     border-left: 2px outset #f56c57;
@@ -188,10 +200,14 @@
     left: 57%;
     width: 4%;
   }
+  iframe{
+    height: 100%;
+    width: 100%;
+  }
 }
 
 
-@media screen and (max-width: 813px) {
+@media only screen and (max-width: 813px) {
   .columns-wrapper{
     height: 520px;
     width: 96%;
@@ -217,8 +233,9 @@
   }
 }
 
+
 /* IPHONE 5 PORTRAIT*/
-@media screen and (max-width:415px) {
+@media only screen and (max-width:415px) {
  h1 {
     text-indent: -50%;
   }
@@ -241,9 +258,10 @@
     width: 40%;
   }
  
-  #about-me, #portfolio {
+  #about-me, #portfolio, #curriculum_vitae {
     width: 40%;
   }
+
   #about-me {
     margin-top: 5%;
   }
@@ -346,21 +364,10 @@
     }
 }
 
-/* IPHONE 6 7 8 landscape*/
-@media only screen 
-    and (max-width:680px) 
-    and (orientation: landscape){
-    .wrapper{
-      height: 143vh;
-    }
-    .columns-wrapper{
-      width: 96%;
-      height: 505px;
-    }
-}
+
 
 /* IPHONE 6 7 8 PLUS portrait*/
-@media screen and (max-width:600px){
+@media only screen and (max-width:600px){
   #github-icon {
     position: relative;
     top: 8.5em;
@@ -379,9 +386,13 @@
   .columns-wrapper{
     height: 43em;
   }
+  bio{
+    width: 95%;
+    left: 2.5%;
+  }
 
 } 
-
+  
 /* IPHONE X portrait */
 @media only screen
     and (max-width:415px)
@@ -397,7 +408,7 @@
  }
 
 /* IPHONE 5 portrait*/
-@media screen and (max-width:330px){
+@media only screen and (max-width:330px){
   #linkedin-icon {
     top: 7.5em;
     left: 10.75em;
@@ -426,7 +437,7 @@
    }
 }
 
-@media screen and (min-width: 416px){
+@media only screen and (min-width: 416px){
   description{
     top: 5%;
   }
@@ -456,6 +467,27 @@
         margin-right: 25%;
       }
 
+}
+/* IPHONE 6 7 8 landscape*/
+@media only screen 
+    and (max-width:680px) 
+    and (orientation: landscape){
+    .wrapper{
+      height: 143vh;
+    }
+    .columns-wrapper{
+      width: 96%;
+      height: 560px;
+    }
+    #linkedin-icon {
+      left: 44.45%;
+    }
+    #github-icon {
+      left: 49%;
+    }
+    bio{
+      height: 50%;
+    }
 }
 
 /* IPHONE X landscape logos*/
@@ -495,7 +527,7 @@
       }
       #github-icon{
          top: 7vh;
-         left: 56.45%;
+         left: 42.45%;
          width: 6%;
       }
      
