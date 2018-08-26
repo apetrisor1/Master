@@ -108,7 +108,10 @@ function domLoaded(){
     showAboutMe();
     state=1;
     console.log('state', state);
-    $('bio').html('<iframe scrolling="no" src="portfolio/external/curriculum_vitae/index.html">iframe is not supported in your browser</iframe>');
+
+      //!!!!!!!!!!!!!!!  apetrisor1.github.io/Portfolio/external/curriculum_vitae/index.html
+    
+    $('bio').html('<iframe scrolling="no" src="Portfolio/external/curriculum_vitae/index.html">iframe is not supported in your browser</iframe>');
   })
 
   
