@@ -4,6 +4,8 @@ body {
   color: #575f6b;
   margin-bottom: 0px;
   font-family: 'Nanum Gothic', sans-serif;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 a {
   color: default;

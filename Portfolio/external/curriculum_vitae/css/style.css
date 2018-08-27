@@ -89,6 +89,10 @@
 	.school{
 		width: 70%;
 	}
+	.high-school{
+		margin-top: 5%; 
+		background-color: #FFF8F1;
+	}
 	.lang-table{
 	    width: 100%;
     	margin-left: 18.5%;
