@@ -133,23 +133,3 @@ img:hover{
 welcome:hover{
   cursor: pointer;
 }
-@media only screen and (max-width: 800px) {
-  img {
-    height: 80px; width: 80px;
-  }
-  footer{
-    left: -50px;
-  }
-  footer2 {
-    left: 65%; top: 345px; line-height: 22px;
-  }
-  #about-team{
-    left: 78%; top: 335px;
-    }
-  pre {
-    display: none;
-    }
-  footer {
-    top: 325px;
-  }
-}
