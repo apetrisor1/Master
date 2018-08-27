@@ -46,9 +46,10 @@ var app_info = [
     api_description: '<ul>' +
     '<li>Documentation: https://docs.opendota.com/</li>'+
     '<li>GET calls used: </li>'+
-    '<li>api.opendota.com/api/teams/{team_id}</li>'+
-    '<li>api.opendota.com/api/teams/{team_id}/players</li>'+
-    '<li>api.opendota.com/api/players/{account_id}</li>'+
+    '<li>api.opendota.com/.. &nbsp;&nbsp; + </li>'+
+    '<li>../api/teams/{team_id}</li>'+
+    '<li>../api/teams/{team_id}/players</li>'+
+    '<li>../api/players/{account_id}</li>'+
     '<li>Restriction: ~1 call per second'+
     '</ul>'
   }

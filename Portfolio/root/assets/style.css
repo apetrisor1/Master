@@ -2,6 +2,9 @@
   *{
     box-sizing: border-box;
   }
+  b{
+    font-weight: 700;
+  }
   strong{
     font-weight: 400;
   }
@@ -390,8 +393,8 @@
     width: 95%;
     left: 2.5%;
   }
-
 } 
+
   
 /* IPHONE X portrait */
 @media only screen
@@ -419,8 +422,8 @@
     top: 7.5em;
     margin-bottom: 4%;
   }
-  ul{
-    font-size: 0.85em;
+  li{
+    font-size: 0.95em;
   }
 }
 

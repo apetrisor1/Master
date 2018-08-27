@@ -3,37 +3,37 @@
 
 jobs = [{
     title: 'Driver',
-	employer: 'SC Donuteria SRL',
-	period: '',
-	description: 'Delivered consumables and stocks to store-fronts and festival booths'
+	employer: 'SC Donuterie SRL',
+	period: 'Apr 2018 - Jul 2018',
+	description: 'Delivered stocks and consumables to store-fronts and festival booths'
 		},
 		{
 	title: 'Data entry with Dutch',
-	employer: 'Iron Mountain Romania, Cluj Napoca',
+	employer: 'Iron Mountain, Cluj Napoca',
 	period: 'Oct 2017 - Feb 2018',
 	description: 'Categorized HR documents for a well-known Dutch supermarket franchise. Project-based, fixed duration of four months.'
 		},
 		{
 	title: 'Researcher with Dutch',
-	employer: 'SC CCSCC. SRL, Cluj Napoca',
+	employer: 'SC CCSCC SRL, Cluj Napoca',
 	period: 'Aug 2015 - Oct 2017',
 	description: 'Monitored governmental, law enforcement and mass-media sources of news from the Netherlands and the former Netherlands '+
 				 'Antilles countries. Created profiles for politically exposed persons from information available online. Created complex '+
 				 'profiles for state-owned companies.'
 		},
 		{
-	title: 'Audit internship',
-	employer: 'KPMG Romania SRL, Cluj Napoca',
+	title: 'Audit Internship',
+	employer: 'KPMG Romania',
 	period: 'Nov 2014 - Mar 2015',
-	description: 'Processed balance sheets and other financial records, performed relevant tests in Excel '+ 
-				 'on these records. Took part in stock-counts to vouch for the correct recording of stocks. Proposed adjustments '+
-				 'where stocks were inappropriately recorded.'
+	description: 'Processed and tested financial records in MS Excel. '+ 
+				 'Took part in stock-counts to vouch for the correct recording of stocks. '+
+				 'Proposed adjustments where stocks were inappropriately recorded.'
 		},
 		{
-    title: 'Supply chain internship',
+    title: 'Supply Chain Internship',
 	employer: 'MM Barcoding Ltd., St. Helens, Merseyside, U.K.',
 	period: 'Nov 2013 - Mar 2014',
-	description: 'Purchased barcode printers, consumables and other parts from suppliers across Europe, then repackaged and sent '+
+	description: 'Purchased barcoding equipment from suppliers across Europe, repackaged and sent '+
 				 'the products to end users or resellers.'
 		},
 		];
@@ -53,9 +53,9 @@ function domLoaded(){
 	}
 	
 	$('.contact-button').click(showTable('contact'));
-	$('.work-button').click(showTable('work'));
+    $('.work-button').click(showTable('work'));
 	$('.education-button').click(showTable('education'));
-	// $('.contact-button').click(showTable('contact'));
+	$('.lang-button').click(showTable('lang'));
 
 
 

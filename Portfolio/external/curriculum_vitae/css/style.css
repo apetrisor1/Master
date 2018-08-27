@@ -1,3 +1,4 @@
+
 @media only screen and (min-width: 100px){
 
 	* {
@@ -36,22 +37,15 @@
 	}
 	td {
 		/*border: 1px solid red;*/
-		padding: 2px;
+		padding: 4px;
 	}
 	empty{
 		color: #fff;
 	}
 
-	spacer {
-		display: block;
-		height: 10vh;
-		background-color: black;
-		width: 50%;
-		margin-bottom: 8%;
-	}
-	
 	#facebook-logo {
 		margin-top: 3%;
+		margin-left: 10%;
 		float: left;
 		width: 8vh;
 	}
@@ -68,10 +62,11 @@
 		flex-basis: 20%;
 		background-color: #f1dcc9;
 		padding: 1px;
+		margin-bottom: 3px;
 	    border-bottom: 1px outset transparent;
 	    border-left: 2px outset transparent;
 	    box-shadow: 2px 2px #edf2f9;
-	    font-size: 0.72em;
+	    font-size: 0.83em;
 	}
 	flexItem:hover{
 		background-color: #fff;
@@ -84,11 +79,23 @@
 
 
 	/*Related to each table*/
-	.contact-table, .work-table, .education-table{
+	
+	.contact-table, .work-table, .education-table, .lang-table {
 		display: none;
 	}
 	.education-table{
-		margin-left: 12%;
+		margin-left: 12.5%;
+	}
+	.school{
+		width: 70%;
+	}
+	.lang-table{
+	    width: 100%;
+    	margin-left: 20%;
+	}
+	.lang-level{
+	    position: relative;
+	    left: 135%;
 	}
 
 	/*EXPERIENCE Table*/
@@ -111,3 +118,14 @@
 	}
 
 }
+
+
+
+/*IPHONE 6,7,8*/
+/* Iframe is 338px wide */
+@media only screen and (min-width: 330px){
+	wrapper{
+		margin-left: 10%;
+	}
+}
+
