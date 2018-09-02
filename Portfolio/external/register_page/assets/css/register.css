@@ -75,11 +75,11 @@
 	    -webkit-box-shadow: 0 0 0px 1000px white inset;
 	}
 	input {
-		border: 1px outset #f56c57;
+		border: none;
 		margin-top: 1vh;
 	}
 	input:nth-of-type(2) {
-		border: 1px inset #f56c57;
+		border: none;
 	}
 	input[type="submit"] {
 		color: white;
