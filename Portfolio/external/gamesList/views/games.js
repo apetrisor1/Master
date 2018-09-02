@@ -54,7 +54,7 @@ window.addEventListener("load", function() {
       displayGame(game);  // Display each game
       update(game._id);   // Add update functionality on each game
       deleteGame(game);   // Add remove functionality on each game
-    }
+    } 
     // End of games list displayed on screen
     console.log('We are working with ' + gamesData.length + ' games');
     // log list info

@@ -1,0 +1,663 @@
+/*/ Start of DESKTOP styles ----------- /*/
+@media only screen  and (max-width : 2800px) {
+	* {
+		box-sizing: border-box;
+	}
+	html {
+  		height: 100%; /*for older browsers*/
+  		height: 100vh; 
+	}
+	body {
+  	    min-height: 100%; /*for older browsers*/
+  	    min-height: 100vh;
+	}
+	a:hover {
+		cursor: pointer;
+		color: red;
+		transition: 1s;
+	}
+	a:not(:hover){
+		transition: 1s;
+	}
+	wrapper {
+ 	    position: relative;
+	    background-color: rgb(255,238,0);
+		display: block;
+		margin-top: 10vh;
+		padding-top: 3.8vh;
+		padding-bottom: 12vh;
+		overflow: overlay; 
+	}
+	.grid{
+		position: absolute;
+		height: 100%;
+		width: 2px;
+		background-color: white;	
+		top: 0;
+		display: none;   
+	}
+	.grid_bar_1{left:8.33%;}
+	.grid_bar_2{left:16.7%;}
+	.grid_bar_3{left:25%;}
+	.grid_bar_4{left:33.33%;}
+	.grid_bar_5{left:41.66%;}
+	.grid_bar_6{left:50%;}
+	.grid_bar_7{left:58.33%;}
+	.grid_bar_8{left:66.7%;}
+	.grid_bar_9{left:75%;}
+	.grid_bar_10{left:83.33%;}
+	.grid_bar_11{left:91.33%;}
+	.grid_bar_12{left:99.75%;}
+
+	.container {
+		/*border: 1px solid red;*/
+	}
+	.container-left {
+		display: inline-block;
+		width: 20%;
+		margin-left: 3%;
+		overflow: hidden; 
+		clear: right;
+	    min-height: 285px;
+	}
+	.container-right {
+	    display: inline-block;
+	    float:right;
+	    width: 67.5%;
+	    margin-right: 8%;
+	    background-color: rgb(255,238,0);
+	    padding-top: 1vh;
+	    padding-bottom: 1vh;
+	}
+	/* The browser, by default, colours yellow an input box when it is autofilled. Below code colours the input box
+	white always. Another way around the yellow shadow is turning autocomplete off for the form, but lets not */
+	input:-webkit-autofill {
+	    -webkit-box-shadow: 0 0 0px 1000px white inset;
+	}
+	input {
+		border: 1px outset #f56c57;
+		margin-top: 1vh;
+	}
+	input:nth-of-type(2) {
+		border: 1px inset #f56c57;
+	}
+	input[type="submit"] {
+		color: white;
+		background-color: rgb(66, 134, 244);
+		display: block;
+		margin-top: 1vh;
+		width: 77px;
+		height: 25px;
+		font-size: 95%;
+		border: none;
+	}
+	input[type = "submit"]:hover {
+	    cursor: pointer;
+	}
+	iframe {
+	    display: none;
+	}
+	body {
+	    font-family: 'Open Sans', sans-serif;
+	}
+
+    /* Red and black silhouettes*/
+	.uma {
+   	    width: 25%;
+   	    clear: right;
+   	    /* ------------  */
+		/*border: 1px solid red;*/
+		/* ------------  */
+	}
+	.left {
+	    float: left;
+	}
+	.right {
+	    float: right;
+	}
+	.clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+	}	
+	#info-logo {
+		position: relative;
+    	top: 0.4em;
+    	left: -10%;
+		/* ------------  */
+		/*border: 1px solid red;*/
+		/* ------------  */
+	}
+	#info-logo:hover, #info-message:hover {
+		cursor: pointer;
+		color: red;
+		transition:1s;
+	}
+	#info-message {
+	    width: 30%; 
+	    display: inline-block;
+		/* ------------  */
+		/*border: 1px solid red;*/
+		/* ------------  */
+	}
+	#info-message:not(:hover) {
+		transition:1s;
+	}
+	#info-text {
+		display: inline-flex;
+	}
+	info, cookieInfo {
+		position: absolute;
+		display: none;
+
+		/* ------------  */
+		/*border: 1px solid red;*/
+		/* ------------  */
+	}
+	info{
+		font-size: 0.95em;
+	}
+	cookieInfo{
+		font-size: 0.9em;
+	}
+	info:nth-of-type(1){
+	    top: 54px;
+   		left: 48%;
+	}
+	info:nth-of-type(2){
+		top: 81px;
+   		left: 48%;
+	}	
+	cookieInfo:nth-of-type(1){
+	    top: 167px;
+		left: 48%;
+	}
+	cookieInfo:nth-of-type(2){
+		top: 187px;
+    	left: 48%;
+	}	
+	.right-info {
+		/* ------------  */
+		/*border: 1px solid red;*/
+		/* ------------  */
+		text-align: right;
+		margin-right: 5%;
+		float: right;
+		clear: both;
+		display: inline-block;
+	}
+	.right-info:hover {
+		color: red;
+		transition: 1.33s;
+		cursor: pointer;
+	}
+	.right-info:not(:hover){
+		transition: 1.15s;
+	}
+	.gdpr-disclaimer {
+		width: 70%;
+		top: 25vh;
+		left: 2.5%;
+		line-height: 16px;
+		font-size: .75em;
+
+	}
+	
+	#gdpr-radio {
+		top: 37vh;
+		left: 2.25%;
+	}
+	#small-arrow {
+		position: relative;
+		width: 6%;
+		top:2px;
+		left: 10%;
+		transition: 1s;
+	}
+
+}
+
+
+/* Styles related to moving around things that break*/
+@media only screen  and (max-width : 1275px) {
+	#info-logo{
+		left: -3%;
+	}#small-arrow{
+		width: 7%;
+	}info:nth-of-type(1){
+	    top: 85px;
+	}
+	
+	info:nth-of-type(2){
+		top: 105px;
+	}}
+@media only screen  and (max-width : 950px){
+	#info-logo{
+		left: 0%;
+	}info:nth-of-type(1){
+	    top: 95px;
+	}
+	
+	info:nth-of-type(2){
+		top: 115px;
+	}}
+@media only screen  and (max-width : 800px){
+	.gdpr-disclaimer{
+		width: 100%;
+	}
+	info:nth-of-type(1){
+	    top: 105px;
+	}
+	info:nth-of-type(2){
+		top: 125px;
+	}
+	info{
+		font-size: 0.8em;
+	}
+	cookieInfo{
+		font-size: 0.75em;
+	}
+}
+
+
+
+/* Start of PHONE styles */
+
+/* Horizontal separator bar in portrait mode */
+@media only screen  
+and (max-width : 521px)
+and (orientation : portrait){
+   .container-right{
+   		border-top: 1px solid rgba(66, 134, 244, 0.5);
+   	} 
+
+} 
+
+
+
+/*GALAXY S5 fix*/
+@media only screen  
+and (min-width : 360px)
+and (max-width : 362px)
+and (orientation : portrait) 
+and (-webkit-device-pixel-ratio: 3){
+	info:nth-of-type(1){
+        top: 41vh;
+  	    left: 12%;
+	}
+	info:nth-of-type(2){
+		top: 43.5vh;
+   		left: 12%;
+	}
+	cookieInfo:nth-of-type(1){
+	    top: 11vh;
+		left: 57%;
+	}
+	cookieInfo:nth-of-type(2){
+	    top: 14vh;
+    	left: 45%;
+	}
+	cookieInfo{
+		font-size: 0.7em;
+	}}
+
+
+/*/ iPhone 5 and 6  and GALAXY S3 ---------- /*/
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-height: 667px) 
+and (-webkit-device-pixel-ratio: 2){
+	.container{
+		width: 80%;
+	}
+	.container-right{
+		margin-top: 4vh;
+		margin-right: 10%;
+	}
+	.container-left{
+		display: block;
+		margin: 0 auto;
+	}
+	.gdpr-disclaimer{
+		line-height: 1.5em;
+	}
+	#info-message {
+		font-size: 0.85em;
+	    width: 40%; 
+	    display: inline-block;
+	}
+	#info-logo {
+		width: 5%;
+		top: -0.7em;
+		left: -5%;
+	}
+	info:nth-of-type(1){
+        top: 21.5em;
+  	    left: 10%;
+	}
+	
+	info:nth-of-type(2){
+		top: 23em;
+   		left: 10%;
+	}	
+	cookieInfo{
+		font-size: 0.7em;
+	}
+	cookieInfo:nth-of-type(1){
+	    top: 12.5vh;
+		left: 62%;
+	}
+	
+	cookieInfo:nth-of-type(2){
+	    top: 15vh;
+    	left: 51%;
+	}}
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-height: 768px) 
+and (orientation : landscape) 
+and (-webkit-device-pixel-ratio: 2){
+	.gdpr-disclaimer{
+		font-size: 0.7em;
+	}
+	#info-logo {
+		top: 0.5em;
+	}}
+
+/* IPHONE 6*/
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-height: 667px){
+	info:nth-of-type(1){
+        top: 42.5vh;
+  	    left: 12%;
+	}
+	info:nth-of-type(2){
+        top: 45vh;
+  	    left: 12%;
+	}}
+
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-height: 667px) 
+and (orientation : landscape){
+	info:nth-of-type(1) {
+    	top: 67vh;
+    	left: 10.5%;
+	}
+	info:nth-of-type(2){
+        top: 71vh;
+  	    left: 10.5%;
+	}
+	cookieInfo:nth-of-type(1) {
+	    top: 67vh;
+	    left: 73.5%;
+	}
+	cookieInfo:nth-of-type(2) {
+	    top: 71vh;
+	    left: 67%;
+	}}
+
+
+/*/ iPhone 6+  ----------- /*/
+
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-height: 736px) 
+and (orientation : portrait) 
+/* THIS SHOULD BE UNCOMMENTED but if we do that, CHROME can't see it*/
+/*and (-webkit-device-pixel-ratio: 2)*/{
+	.container{
+		width: 80%;
+	}
+	.container-right{
+		margin-right: 10%;
+	}
+	.container-left{
+		display: block;
+		margin: 0 auto;
+	}
+	.gdpr-disclaimer{
+		line-height: 1.5em;
+	}
+	#info-message {
+		font-size: 0.85em;
+	    width: 40%; 
+	    display: inline-block;
+	}
+	#info-logo {
+		width: 5%;
+		top: -0.7em;
+		left: -8%;
+	}
+	info:nth-of-type(1){
+        top: 37vh;
+  	    left: 12%;
+	}
+	info:nth-of-type(2){
+        top: 39vh;
+  	    left: 12%;
+	}
+	cookieInfo:nth-of-type(1) {
+    	top: 11vh;
+	    left: 60%;
+	}
+	cookieInfo:nth-of-type(2) {
+	    top: 13vh;
+    	left: 49%;
+	}
+}
+
+
+/* IPHONE X (portrait) */
+
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-height: 812px) 
+and (orientation : portrait) 
+and (-webkit-device-pixel-ratio: 3){
+	.container{
+		width: 80%;
+	}
+	.container-right{
+		margin-top: 8vh;
+		margin-right: 10%;
+	}
+	.container-left{
+		display: block;
+		margin: 0 auto;
+	}
+	.gdpr-disclaimer{
+		line-height: 1.5em;
+	}
+	#info-message {
+		font-size: 0.85em;
+	    width: 40%; 
+	    display: inline-block;
+	}
+	#info-logo {
+		width: 7%;
+		top: -0.5em;
+		left: -7%;
+	}
+	info:nth-of-type(1){
+        top: 40vh;
+  	    left: 12%;
+	}
+	info:nth-of-type(2){
+        top: 42.5vh;
+  	    left: 12%;
+	}
+	cookieInfo:nth-of-type(1) {
+    	top: 11vh;
+	    left: 60%;
+	}
+	cookieInfo:nth-of-type(2) {
+	    top: 13vh;
+    	left: 49%;
+	}
+}
+
+/*  Samsung Galaxy S5 (portrait and landscape) ----------- /*/
+/*  There is also another fix for S5 at the start of phone styles */
+
+@media only screen 
+and (min-device-width: 360px) 
+and (max-device-height: 640px) 
+and (-webkit-device-pixel-ratio: 3){
+	.container{
+		width: 80%;
+	}
+	.container-right{
+		margin-right: 10%;
+	}
+	.container-left{
+		display: block;
+		margin: 0 auto;
+	}
+	.gdpr-disclaimer{
+		line-height: 1.5em;
+	}
+	#info-message {
+		font-size: 0.85em;
+	    width: 40%; 
+	    display: inline-block;
+	}
+	#info-logo {
+		width: 5%;
+		top: -0.7em;
+		left: -8%;
+	}}
+
+
+@media only screen 
+and (min-device-width: 360px) 
+and (max-device-height: 640px) 
+and (orientation : landscape) 
+and (-webkit-device-pixel-ratio: 3){
+	#info-logo {
+		top: 0.5em;
+	}}
+
+
+/* iPads (portrait and landscape) ----------- */
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px){
+	#info-logo {
+    left: -5%;
+    top: -0.5em;
+	}
+	#small-arrow {
+    width: 10%;
+    top: -1px;
+    }
+    .right-info{
+    	margin-right: 0%;
+    }}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+	#info-logo {
+    left: -5%;
+    top: 0.5em;
+	}}
+
+
+/*IPHONE X small arrow fix (landscape) */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-height: 812px) 
+and (orientation : landscape)
+and (-webkit-device-pixel-ratio: 3){
+	#small-arrow {
+    width: 4%;
+    top: 4px;
+	}}
+
+/* IPAD PRO info logo fix*/
+@media only screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 1025px)
+and (orientation : portrait){
+	#info-logo {
+   	left: -3%;
+    top: 0.5em;
+	}}
+
+/* NEXUS 7 fix */
+@media only screen  
+and (min-width : 960px)
+and (max-width: 961px)
+and (orientation : landscape){
+	info:nth-of-type(1) {
+	    top: 48vh;
+	    left: 10%;
+	}
+	info:nth-of-type(2) {
+	    top: 51vh;
+  	    left: 10%;
+	}
+	cookieInfo:nth-of-type(1) {
+	    top: 5vh;
+	    left: 53.5%;
+	}
+	cookieInfo:nth-of-type(2) {
+	    top: 8vh;
+	    left: 49%;
+	}
+	#small-arrow {
+	    width: 25px;
+	    top: 4px;
+	}
+	#info-logo {
+        width: 3%;
+		left: -20%;
+		top: 6px;
+	}}
+
+@media only screen  
+and (min-width : 600px)
+and (max-width: 601px)
+and (orientation : portrait){
+	.container {
+		width: 80%;
+	}
+	.container-left {
+		display: block;
+		margin: 0 auto;
+	}
+	.container-right {
+		display: block;
+		margin-right: 10%;
+	}
+	#info-logo {
+	    left: -7%;
+	    top: -8px;
+	}
+	#small-arrow {
+	    width: 6%;
+	    top: 5px;
+	}
+	info:nth-of-type(1) {
+	    top: 22.5em;
+	    left: 10%;
+	}
+	info:nth-of-type(2) {
+	    top: 24em;
+	    left: 10%;
+	}
+	cookieInfo:nth-of-type(1) {
+	    top: 24em;
+	    left: 70%;
+	}
+	cookieInfo:nth-of-type(2) {
+	    top: 25.5em;
+	    left: 63%;
+	}
+}

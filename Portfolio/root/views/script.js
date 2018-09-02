@@ -52,6 +52,19 @@ var app_info = [
     '<li>../api/players/{account_id}</li>'+
     '<li>Restriction: ~1 call per second'+
     '</ul>'
+  },
+   {
+    name: 'register',
+    about: '<ul>' +
+    '<li>Register form for joining an IMDB clone.</li>' +
+    '<li>On submit, information is sent to server.</li>' +
+    '<li>Console logs response from server.</li>' +
+    '</ul>',
+    short_url: `Portfolio/external/register_page/pages/register.html`,
+    api_description: 
+    '<ul>' +
+    '<li>""""</li>'+
+    '</ul>'
   }
 ]
 
@@ -110,7 +123,6 @@ function domLoaded(){
     state=1;
     console.log('state', state);
 
-      //!!!!!!!!!!!!!!!  apetrisor1.github.io/Portfolio/external/curriculum_vitae/index.html
     
     $('bio').html('<iframe scrolling="no" src="Portfolio/external/curriculum_vitae/index.html">iframe is not supported in your browser</iframe>');
   })
@@ -170,6 +182,10 @@ function domLoaded(){
   
   $('#dota').click(function(){
          animateApp('dota');
+         $('.api-info-button').css('display' , 'block');
+  })
+  $('#register').click(function(){
+         animateApp('register');
          $('.api-info-button').css('display' , 'block');
   })
   

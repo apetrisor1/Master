@@ -186,6 +186,9 @@
     left: 22%;
     width: 10%;
   }
+  .register_logo{
+    width: 14%;
+  }
   p {
     font-size: 0.95em;
   }
@@ -271,7 +274,7 @@
     margin-top: 5%;
   }
   .flex-container {
-    margin-top: 33%;
+    margin-top: 40%;
     height: 20vh;
     flex-wrap: wrap;
     justify-content: none;
@@ -470,7 +473,10 @@
       }
       .item:nth-of-type(4){
         flex-basis: 17%;
-        margin-right: 25%;
+      }
+      .item:nth-of-type(5){
+        flex-basis: 17%;
+        margin-right: 5%;
       }
 
 }
