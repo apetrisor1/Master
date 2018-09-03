@@ -2,12 +2,6 @@
 // JOB INFO for EXPERIENCE text carousel
 
 jobs = [{
-    title: 'Driver',
-	employer: 'SC Donuterie SRL',
-	period: 'Apr 2018 - Jul 2018',
-	description: 'Delivered stocks and consumables to store-fronts and festival booths'
-		},
-		{
 	title: 'Data entry with Dutch',
 	employer: 'Iron Mountain, Cluj Napoca',
 	period: 'Oct 2017 - Feb 2018',
@@ -68,8 +62,23 @@ function domLoaded(){
 	var jobTracker = 0;
 
 
-	// Populates EXPERIENCE part of CV with other jobs by scrolling through them
+	// Handles small arrows in 'experience' section of Resume
+	function handleLeftArrow(){
+		$('.right').css('visibility', 'visible');
+		if(jobTracker === 1){
+			$('.left').css('visibility','hidden');
+		}
+	}
+	function handleRightArrow(){
+		$('.left').css('visibility', 'visible');
+		if(jobTracker === 2 ){
+			$('.right').css('visibility','hidden');
+		}
+	}
+	
+	// Animates small arrows to populate EXPERIENCE part of CV
 	$('.left').click(function(){
+		handleLeftArrow();
 		if(jobTracker !== 0){
 			jobTracker --;
 			$('.job_title').html(jobs[jobTracker].title);
@@ -79,7 +88,8 @@ function domLoaded(){
 		}
 	})
 	$('.right').click(function(){
-		if(jobTracker !== 4){
+		handleRightArrow();
+		if(jobTracker !== 3){
 			jobTracker ++;
 			$('.job_title').html(jobs[jobTracker].title);
 			$('.job_employer').html(jobs[jobTracker].employer);

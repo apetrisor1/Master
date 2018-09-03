@@ -28,6 +28,7 @@
 	wrapper{
 		display: block;
 		width: 292px;
+		background-color: pink;
 	}
 	table {
 		text-align: center;
@@ -54,12 +55,15 @@
 		display: flex;
 		width: 100%;
 		flex-wrap: wrap;
-		flex-direction: column;
 		margin-bottom: 8%;
+		justify-content: flex-end;
+		align-items: flex-start;
+		height: 15em;
+
 	}
 
 	flexItem{
-		width:50%;
+		flex-basis: 35%;
 		background-color: #f1dcc9;
 		padding: 1px;
 		margin-bottom: 3px;
@@ -107,6 +111,7 @@
 		width: 5%;
 	}
 	.left{
+		visibility: hidden;
 		float:left;
 		margin-left: 5%;
 	}

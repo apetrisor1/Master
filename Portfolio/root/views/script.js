@@ -63,7 +63,10 @@ var app_info = [
     short_url: `Portfolio/external/register_page/pages/register.html`,
     api_description: 
     '<ul>' +
-    '<li>""""</li>'+
+    '<li>POST sends new user </li>'+
+    '<li>as {username:,password:}</li>'+
+    '<li>Returns unique access token</li>'+
+    '<li> Here -> logged in console. </li>'+
     '</ul>'
   }
 ]
