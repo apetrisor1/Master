@@ -58,7 +58,7 @@ var app_info = [
     about: '<ul>' +
     '<li>Register form for joining an IMDB clone.</li>' +
     '<li>On submit, information is sent to server.</li>' +
-    '<li>Console logs response from server.</li>' +
+    '<li>Console logs token received from server.</li>' +
     '</ul>',
     short_url: `Portfolio/external/register_page/pages/register.html`,
     api_description: 
@@ -66,7 +66,6 @@ var app_info = [
     '<li>POST sends new user </li>'+
     '<li>as {username:,password:}</li>'+
     '<li>Returns unique access token</li>'+
-    '<li> Here -> logged in console. </li>'+
     '</ul>'
   }
 ]

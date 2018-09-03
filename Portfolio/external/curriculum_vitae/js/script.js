@@ -49,10 +49,6 @@ function domLoaded(){
 	$('.contact-button').click(showTable('contact'));
     $('.work-button').click(showTable('work'));
 	$('.education-button').click(showTable('education'));
-	$('.lang-button').click(showTable('lang'));
-
-
-
 
 
 

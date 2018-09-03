@@ -28,7 +28,6 @@
 	wrapper{
 		display: block;
 		width: 292px;
-		background-color: pink;
 	}
 	table {
 		text-align: center;
@@ -53,24 +52,13 @@
 
 	.flex-container{
 		display: flex;
-		width: 100%;
-		flex-wrap: wrap;
 		margin-bottom: 8%;
-		justify-content: flex-end;
-		align-items: flex-start;
-		height: 15em;
-
+		justify-content: space-between;
 	}
-
 	flexItem{
-		flex-basis: 35%;
-		background-color: #f1dcc9;
-		padding: 1px;
-		margin-bottom: 3px;
 	    border-bottom: 1px outset transparent;
 	    border-left: 2px outset transparent;
-	    box-shadow: 2px 2px #edf2f9;
-	    font-size: 0.83em;
+	    font-size: 0.9em;
 	}
 	flexItem:hover{
 		background-color: #fff;
@@ -87,23 +75,29 @@
 	.contact-table, .work-table, .education-table, .lang-table {
 		display: none;
 	}
-	.education-table{
-		margin-left: 12.5%;
-	}
+	
 	.school{
-		width: 70%;
+		width: 65%;
 	}
 	.high-school{
 		margin-top: 5%; 
 		background-color: #FFF8F1;
 	}
+	.extraCurr {
+		background-color: #FFF8F1;
+		margin-bottom: 5%; 
+	}
 	.lang-table{
 	    width: 100%;
-    	margin-left: 18.5%;
+    	margin-left: 8%;
 	}
 	.lang-level{
 	    position: relative;
-	    left: 135%;
+	    left: 150%;
+	}
+	.work-table{
+		position: relative;
+		left: -8%;
 	}
 
 	/*EXPERIENCE Table*/
