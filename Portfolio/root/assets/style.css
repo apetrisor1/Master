@@ -693,7 +693,7 @@ and (max-width: 1023px){
 
 /*IPAD*/
 @media only screen
-  and (max-width: 1365px){
+  and (max-width: 1146px){
     #frame{
       left: 2px;
       top: 38.75%;
@@ -734,8 +734,8 @@ and (max-width: 1023px){
 
 /*PIXEL 2*/
  @media only screen
-  and (min-width: 823px)
-  and (max-width: 825px)
+  and (min-width: 821px)
+  and (max-width: 910px)
   and (orientation : landscape){
   iframe{
     left: 12px;
@@ -746,3 +746,22 @@ and (max-width: 1023px){
 }
 
 
+@media only screen
+  and (max-width: 801px)
+  and (orientation : landscape){
+    #frame{
+     top: 38.35%;
+    }
+    iframe{
+    left: 3px;
+  }
+}
+
+@media only screen
+  and (min-width: 1146px)
+  and (max-width: 1250px){
+    iframe{
+     left: 10px;
+     top: -24px;
+   }
+}

@@ -7,6 +7,9 @@
 	* {
 		box-sizing: border-box;
 	}
+	.arrow {
+		cursor: pointer;
+	}
 	a{
 		color: black;
 		text-decoration: none;
@@ -80,10 +83,25 @@
 
 
 	/*Related to each table*/
+	.tech-left, .tech-right{
+	    text-align: center;
+		margin-top: 10%;
+	}
+	.tech-left{
+		float:left;
+	    margin-left: 26.5%;
+	    font-size: 0.75em;
+	}
+	.tech-right{
+		float:right; 
+		margin-right: 31%;
+	    font-size: 0.75em;
+	}
 	
-	.contact-table, .work-table, .education-table, .lang-table {
+	.contact-table, .work-table, .education-table, .lang-table, .tech-table {
 		display: none;
 	}
+	
 	
 	.school{
 		width: 40%;
@@ -106,6 +124,8 @@
 	    left: 0%;
    	    text-align: left;
 	}
+	
+
 
 	/*EXPERIENCE Table*/
 	.arrow{
@@ -123,20 +143,21 @@
 	}
 	.job_period{
 		display: inline-block;
-		margin-bottom: 0; margin-top: 3px;
+		margin-bottom: 5px; margin-top: 3px;
 		font-weight: 700;
 	}
-
+	.job_description, .job_employer{
+		line-height: 1.75em;
+	}
 
 }
 
 
 
 
-
 @media only screen and (max-width: 500px){
 	wrapper{
-		width: 100%;
+		width: 97%;
 	}
 	.my-links{
 		left: -6.5%;
@@ -146,9 +167,12 @@
 
 
 @media only screen and (max-width: 320px){
-	
 	.my-links{
-		left: 0;
+		left: 4px;
 	}
-
+	wrapper{
+		width: 98%;
+	}
 }
+
+

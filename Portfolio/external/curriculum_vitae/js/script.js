@@ -25,7 +25,7 @@ jobs = [{
 		},
 		{
     title: 'Supply Chain Internship',
-	employer: 'MM Barcoding Ltd., St. Helens, Merseyside, U.K.',
+	employer: 'MM Barcoding Ltd., St. Helens, U.K.',
 	period: 'Nov 2013 - Mar 2014',
 	description: 'Purchased barcoding equipment from suppliers across Europe, repackaged and sent '+
 				 'the products to end users or resellers.'
@@ -41,7 +41,16 @@ function domLoaded(){
 	// Shows table chosen by user
 	function showTable(keyword){
 		$(`.${keyword}-button`).click(function(){
+
+			//  Hide all tables first
 			$('table').css('display','none');
+
+			// ********
+			// fix to hide tech part of CV as well, since it's not a regular table
+			$('.tech-table').css('display','none');
+			// ********
+
+			// Show user's chosen table
 			$(`.${keyword}-table`).css('display','block');
 		})
 	}
@@ -49,6 +58,7 @@ function domLoaded(){
 	$('.contact-button').click(showTable('contact'));
     $('.work-button').click(showTable('work'));
 	$('.education-button').click(showTable('education'));
+	$('.tech-button').click(showTable('tech'));
 
 
 
