@@ -30,7 +30,7 @@
 	}
 	wrapper{
 		display: block;
-		width: 415px;
+		width: 410px;
 	}
 	table {
 		text-align: center;
@@ -66,7 +66,8 @@
 	flexItem{
 	    border-bottom: 1px outset transparent;
 	    border-left: 2px outset transparent;
-	    font-size: 0.9em;
+	    font-size: 0.85em;
+	    font-weight: 700;
 	}
 	flexItem:hover{
 		background-color: #fff;

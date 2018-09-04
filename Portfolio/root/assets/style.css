@@ -1,4 +1,12 @@
 /* general styles */
+
+  #frame{
+    position: absolute;
+    left: 30px;
+    top: 39.35%;
+    z-index: 0;
+    visibility: hidden;
+  }
   html{
     height: 117vh;
   }
@@ -101,6 +109,7 @@
     border-bottom: 1px outset transparent;
     border-left: 2px outset transparent;
     font-family: source sans pro,georgia,serif;
+    position: relative;
   }
   #about-me:hover, #portfolio:hover, #curriculum_vitae:hover {
     cursor: pointer;
@@ -663,10 +672,43 @@ and (max-width: 1023px){
   and (orientation : portrait){
 
   #linkedin-icon{
-    top: 8rem;
+    top: 8.75rem;
   }
   #github-icon{
-    top: 8rem;
+    top: 8.75rem;
+  }
+}
+
+ 
+ /* move IPAD decorative frame to suit IPAD and IPAD pro resolutions */
+@media only screen
+  and (max-width: 1400px){
+    #frame{
+      left: 21px;
+      top: 39%;
+    }
+}
+
+@media only screen
+  and (max-width: 1365px){
+    #frame{
+      left: 2px;
+      top: 39%;
+    }
+}
+@media only screen
+  and (max-width: 1023px)
+  and (orientation : portrait){
+    #frame{
+      left: 3px;
+      top: 38.75%;
+      width: 71%;
+    }
+}
+@media only screen
+  and (max-width: 767px){
+  #frame{
+    display: none;
   }
 }
 

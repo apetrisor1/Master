@@ -88,7 +88,7 @@ function showPortfolio(){
   $('.flex-container').css('display','flex');
   $('.info').css('display','block');
   $('bio').css('display','none');
-//   $('description').css('display','none')
+  $('#frame').css('visibility','hidden');
 }
 function showAboutMe(){
   $('bio').css('display','block');
@@ -124,8 +124,7 @@ function domLoaded(){
     showAboutMe();
     state=1;
     console.log('state', state);
-
-    
+    $('#frame').css('visibility','visible');
     $('bio').html('<iframe scrolling="no" src="Portfolio/external/curriculum_vitae/index.html">iframe is not supported in your browser</iframe>');
   })
 
