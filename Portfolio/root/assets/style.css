@@ -740,6 +740,9 @@ and (max-width: 1023px){
   iframe{
     left: 12px;
   }
+  #frame{
+    top: 39.25%;
+  }
 }
 
 
