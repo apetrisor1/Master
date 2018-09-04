@@ -608,10 +608,13 @@ and (max-width: 1023px){
 
 @media only screen
  and (min-width: 411px)
- and (max-width: 412px)
+ and (max-width: 415px)
  and (orientation : portrait){
   .wrapper{
     height: 47.75em;
+  }
+  #linkedin-icon, #github-icon{
+    top: 12rem;
   }
 }
 
