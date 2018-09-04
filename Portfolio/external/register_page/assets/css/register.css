@@ -687,8 +687,10 @@ and (orientation : portrait){
 	    top: 24em;
 	    left: 10%;
 	}}
+
+/* PIXEL 2 FIXES*/
 @media only screen  
-and (min-width : 823px)
+and (min-width : 822px)
 and (max-width: 824px)
 and (orientation : landscape){
 	.left, .left-info {
@@ -701,6 +703,7 @@ and (orientation : landscape){
 	.info-message {
 			font-size: 1em;
 	}
+	
 }
 @media only screen  
 and (min-width : 421px)

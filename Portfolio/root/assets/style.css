@@ -681,6 +681,8 @@ and (max-width: 1023px){
 
  
  /* move IPAD decorative frame to suit IPAD and IPAD pro resolutions */
+
+ /*IPAD PRO*/
 @media only screen
   and (max-width: 1400px){
     #frame{
@@ -689,20 +691,38 @@ and (max-width: 1023px){
     }
 }
 
+/*IPAD*/
 @media only screen
   and (max-width: 1365px){
     #frame{
       left: 2px;
-      top: 39%;
+      top: 38.75%;
     }
 }
+
+/*IPHONE X*/
+@media only screen
+  and (min-width: 810px)
+  and (max-width: 815px)
+  and (orientation : landscape){
+    #frame{
+      top: 39.4%;
+    }
+  }
+
+
+/*IPAD*/
 @media only screen
   and (max-width: 1023px)
   and (orientation : portrait){
     #frame{
       left: 3px;
       top: 38.75%;
-      width: 71%;
+      width: 72%;
+    }
+    iframe{
+      left: 6px;
+      top:-18px
     }
 }
 @media only screen
@@ -712,4 +732,14 @@ and (max-width: 1023px){
   }
 }
 
- 
+/*PIXEL 2*/
+ @media only screen
+  and (min-width: 823px)
+  and (max-width: 825px)
+  and (orientation : landscape){
+  iframe{
+    left: 12px;
+  }
+}
+
+
