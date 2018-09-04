@@ -404,7 +404,7 @@
 
 /* IPHONE 5 landscape*/
 @media only screen 
-    and (max-width:569px) 
+    and (max-width:650px) 
     and (orientation: landscape){
     .wrapper{
       height: 181vh;  
@@ -643,26 +643,26 @@ and (max-width: 1023px){
 
 /* Fix LinkedIn and Github logos on larger screens*/
 @media only screen
-  and (min-width: 411px)
+  and (min-width: 415px)
   and (orientation : portrait){
 
   #linkedin-icon{
-    top: 12rem;
+    top: 6rem;
   }
   #github-icon{
-    top: 12rem;
+    top: 6rem;
   }
 }
 
 @media only screen
-  and (min-width: 650px)
+  and (min-width: 630px)
   and (orientation : portrait){
 
   #linkedin-icon{
-    top: 9rem;
+    top: 8rem;
   }
   #github-icon{
-    top: 9rem;
+    top: 8rem;
   }
 }
 
