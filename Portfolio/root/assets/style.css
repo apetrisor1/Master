@@ -1,5 +1,7 @@
 /* general styles */
-
+  html{
+    height: 117vh;
+  }
   *{
     box-sizing: border-box;
   }
@@ -28,7 +30,16 @@
     cursor: pointer;
   }
   #github-icon, #linkedin-icon {
-    width: 4%;
+    width: 28px;
+    position: absolute;
+  }
+  #github-icon{
+    top: 10rem;
+    right: .5em;
+  }
+  #linkedin-icon{
+    top: 10rem;
+    right: 3em;
   }
   bio {
     display: block;
@@ -57,7 +68,7 @@
   .columns-wrapper {
     width: 80%;
     margin: 0 auto;
-    min-height: 46em;
+    min-height: 46.5em;
     margin-top: 5%;
     border: 1px outset #231b12;
     position: relative;
@@ -102,7 +113,8 @@
   .flex-container {
     background-color: #fff;
     display: none;
-    margin-top: 20%;
+    margin-top: 17%;
+    margin-bottom: 3%;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -198,18 +210,7 @@
     cursor: pointer;
   }
 
-  #linkedin-icon{
-    position: relative;
-    top: 15em;
-    left: 52.5%;
-    width: 4%;
-  }
-  #github-icon{
-    position: relative;
-    top: 12.5em;
-    left: 57%;
-    width: 4%;
-  }
+ 
   iframe{
     height: 100%;
     width: 100%;
@@ -218,24 +219,20 @@
   }
 }
 
+@media only screen
+  and (max-width: 1300px){
+    .flex-container{
+      margin-bottom: 5%;
+    }
+  }
+
 
 @media only screen and (max-width: 813px) {
   .columns-wrapper{
     height: 520px;
     width: 96%;
   }
-  #linkedin-icon{
-    position: relative;
-    top: 6.35em;
-    left: 19.25em;
-    width: 4%;
-  }
-  #github-icon{
-    position: relative;
-    top: 6.35em;
-    left: 19em;
-    width: 4%;
-  }
+
   #logo {
     margin-right: 72%;
     width: 15%;
@@ -243,6 +240,7 @@
   description{
     top: 4%;
   }
+
 }
 
 
@@ -346,18 +344,7 @@
   p:nth-of-type(3){
     margin-top: 1.8vh;
   }
-  #linkedin-icon{
-    position: relative;
-    top: 19.2vh;
-    left: 18.2vh;
-    width: 9%;
-  }
-  #github-icon{
-    position: relative;
-    top: 19.2vh;
-    left: 29.2vh;
-    width: 9%;
-  }
+ 
 }
 
 /* IPHONE X landscape*/
@@ -389,19 +376,6 @@
 
 /* IPHONE 6 7 8 PLUS portrait*/
 @media only screen and (max-width:600px){
-  #github-icon {
-    position: relative;
-    top: 8.5em;
-    left: 10.5em;
-    width: 9%;
-  }
-  #linkedin-icon {
-    position: relative;
-    top: 8.5em;
-    left: 11em;
-    width: 9%;
-  }
-
   bio{
     width: 95%;
     left: 2.5%;
@@ -411,8 +385,8 @@
   
 /* IPHONE X portrait */
 @media only screen
-    and (max-width:415px)
     and (min-width:375px)
+    and (max-width:410px)
     and (orientation: portrait){
    
     .columns-wrapper{
@@ -422,16 +396,7 @@
 
 /* IPHONE 5 portrait*/
 @media only screen and (max-width:330px){
-  #linkedin-icon {
-    top: 7.5em;
-    left: 10.75em;
-    width: 9%;
-    margin-bottom: 4%;
-  }
-  #github-icon{
-    top: 7.5em;
-    margin-bottom: 4%;
-  }
+  
   li{
     font-size: 0.95em;
   }
@@ -447,24 +412,16 @@
     .columns-wrapper{
       width: 96%;
    }
+   #github-icon, #linkedin-icon{
+      top: 6.5em;
+   }
 }
 
 @media only screen and (min-width: 416px){
   description{
     top: 5%;
   }
-  #linkedin-icon{
-    position: relative;
-    top: 20vh;
-    left: 52.45%;
-    width: 4%;
-  }
-  #github-icon{
-    position: relative;
-    top: 28vh;
-    left: 57%;
-    width: 4%;
-  }
+  
   .item:nth-of-type(1){
         flex-basis: 15%;
   }
@@ -481,6 +438,7 @@
     flex-basis: 17%;
     margin-right: 5%;
   }
+ 
 
 }
 /* IPHONE 6 7 8 landscape*/
@@ -493,12 +451,7 @@
     .columns-wrapper{
       width: 96%;
     }
-    #linkedin-icon {
-      left: 44.45%;
-    }
-    #github-icon {
-      left: 49%;
-    }
+    
     bio{
       height: 55%;
     }
@@ -509,18 +462,7 @@
     and (min-width:800px) 
     and (max-width:850px)
     and (orientation: landscape){
-    #linkedin-icon{
-    position: relative;
-    top: 9em;
-    left: 52.5%;
-    width: 4%;
-  }
-  #github-icon{
-    position: relative;
-    top: 6.5em;
-    left: 57%;
-    width: 4%;
-  }
+    
 }
 
 /*IPAD portrait*/
@@ -532,16 +474,7 @@
         height: 57vh;
       }*/
      
-      #linkedin-icon{
-         top: 7vh;
-         left: 42.45%;
-         width: 6%;
-      }
-      #github-icon{
-         top: 7vh;
-         left: 42.45%;
-         width: 6%;
-      }     
+        
       description{
         top: 6%;
       }
@@ -575,14 +508,7 @@
    .columns-wrapper{
       min-height: 38em;
     }
-    #linkedin-icon{
-      top: 7vh;
-      left: 43.45%;
-    }
-    #github-icon{
-      top: 7vh;
-      left: 54%;
-    }
+ 
     .flex-container{
       margin-bottom: 5%;
     }
@@ -590,19 +516,16 @@
 
 /*Large screen FIX*/
 @media only screen 
-  and (min-width: 1366px){
-    #linkedin-icon{
-      top: 22vh;
-      width: 3%;
-      }
-    #github-icon{
-      width: 3%;
-      left: 55.75% ;
-    }
+  and (min-width: 1230px){
+   
     description{
       margin-top: 6%;
     }
-  }
+    #github-icon, #linkedin-icon {
+    top: 14rem;
+    width: 35px;
+    }
+}
 
 @media only screen
   and (orientation : landscape){
@@ -630,7 +553,7 @@ and (max-width: 1023px){
   and (min-height: 810px)
   and (max-height: 813px){
     .wrapper{
-      height: 116.5vh;
+      height: 101vh;
     }
     .columns-wrapper{
       min-height: 50em; 
@@ -645,7 +568,7 @@ and (max-width: 1023px){
   and (min-height: 736px)
   and (max-height: 740px){
     .wrapper{
-      height: 109vh;
+      height: 102vh;
     }
     .columns-wrapper{
       min-height: 45.5em; 
@@ -680,3 +603,67 @@ and (max-width: 1023px){
       min-height: 42em;
     }  
 }
+
+/* PIXEL2 + PIXEL2 XL FIX*/
+
+@media only screen
+ and (min-width: 411px)
+ and (max-width: 412px)
+ and (orientation : portrait){
+  .wrapper{
+    height: 47.75em;
+  }
+}
+
+
+/* NEXUS 7 FIX*/
+
+@media only screen
+  and (min-width: 600px)
+  and (max-width: 660px)
+  and (orientation : portrait){
+  
+  .flex-container{
+    margin-bottom: 28%;
+    margin-bottom: 10%;
+    justify-content: space-between;
+    margin-left: 5%;
+  }
+  .item{
+    height: 6vh;
+  }
+  .item:nth-of-type(2), .item:nth-of-type(3){
+    flex-basis: 20%;
+  }
+  .item:nth-of-type(3){
+    align-self: flex-start;
+  }
+}
+
+
+/* Fix LinkedIn and Github logos on larger screens*/
+@media only screen
+  and (min-width: 411px)
+  and (orientation : portrait){
+
+  #linkedin-icon{
+    top: 12rem;
+  }
+  #github-icon{
+    top: 12rem;
+  }
+}
+
+@media only screen
+  and (min-width: 650px)
+  and (orientation : portrait){
+
+  #linkedin-icon{
+    top: 9rem;
+  }
+  #github-icon{
+    top: 9rem;
+  }
+}
+
+ 

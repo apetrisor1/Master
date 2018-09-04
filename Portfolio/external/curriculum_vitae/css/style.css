@@ -30,7 +30,7 @@
 	}
 	wrapper{
 		display: block;
-		width: 300px;
+		width: 415px;
 	}
 	table {
 		text-align: center;
@@ -45,7 +45,12 @@
 	empty{
 		color: #fff;
 	}
-
+	.my-links{
+		text-align: left;
+		width: 30%;
+		position: relative;
+		left: -12%;
+	}
 	#facebook-logo {
 		margin-top: 3%;
 		margin-left: 10%;
@@ -99,7 +104,6 @@
 		position:relative;
 	    left: 0%;
    	    text-align: left;
-
 	}
 
 	/*EXPERIENCE Table*/
@@ -122,7 +126,10 @@
 		font-weight: 700;
 	}
 
+
 }
+
+
 
 
 
@@ -130,6 +137,17 @@
 	wrapper{
 		width: 100%;
 	}
+	.my-links{
+		left: -6.5%;
+	}
+
 }
 
 
+@media only screen and (max-width: 320px){
+	
+	.my-links{
+		left: 0;
+	}
+
+}
