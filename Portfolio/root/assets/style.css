@@ -125,6 +125,7 @@
     display: none;
     margin-top: 17%;
     margin-bottom: 3%;
+    margin-left: 4.5%;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -287,6 +288,7 @@
   .flex-container {
     margin-top: 40%;
     height: 24vh;
+    margin-left: 0;
     flex-wrap: wrap;
     align-items: flex-end;
     }
