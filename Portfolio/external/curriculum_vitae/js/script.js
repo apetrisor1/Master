@@ -4,13 +4,13 @@
 jobs = [{
 	title: 'Data entry with Dutch',
 	employer: 'Iron Mountain, Cluj Napoca',
-	period: 'Oct 2017 - Feb 2018',
+	period: 'Oct 2017 - Jan 2018',
 	description: 'Categorized HR documents for a well-known Dutch supermarket franchise. Project-based, fixed duration of four months.'
 		},
 		{
 	title: 'Researcher with Dutch',
 	employer: 'SC CCSCC SRL, Cluj Napoca',
-	period: 'Aug 2015 - Oct 2017',
+	period: 'Aug 2015 - Sep 2017',
 	description: 'Monitored governmental, law enforcement and mass-media sources of news from the Netherlands and the former Netherlands '+
 				 'Antilles countries. Created profiles for politically exposed persons from information available online. Created complex '+
 				 'profiles for state-owned companies.'
