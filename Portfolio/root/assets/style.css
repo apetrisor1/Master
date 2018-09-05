@@ -765,3 +765,18 @@ and (max-width: 1023px){
      top: -24px;
    }
 }
+
+/* MS IE 10+ FIX */
+_:-ms-lang(x), .cat-eyes 
+{ 
+  margin-left: 88.35%;
+}
+
+
+
+/* MS EDGE FIX */
+_:-ms-lang(x), _:-webkit-full-screen, .cat-eyes 
+{ 
+  margin-left: 46%;
+}
+
