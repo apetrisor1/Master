@@ -778,3 +778,10 @@ _:-ms-lang(x), _:-webkit-full-screen, .cat-eyes
   margin-left: 46%;
 }
 
+/* FIREFOX FIX*/
+@-moz-document url-prefix() {
+  .cat-eyes 
+  { 
+  margin-left: 46.1%;
+  }
+}
