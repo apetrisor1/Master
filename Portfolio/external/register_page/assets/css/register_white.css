@@ -9,11 +9,28 @@
 	}
 
 	.style-picker{
-		font-size:0.75em;
+		font-size:.75em;
 		position: relative;
 	}
 	.style-picker:nth-of-type(2){
 	}
+
+	a:hover {
+		cursor: pointer;
+		color: red;
+	}
+	a:not(:hover){
+	}
+
+	wrapper {
+ 	    position: relative;
+ 	    top: 13vh;
+		display: block;
+		padding-top: 3.8vh;
+		padding-bottom: 8vh;
+		overflow: auto; 
+	}
+	/* Add a black background color to the top navigation bar */
 	.topnav {
     	overflow: hidden;
     	background-color: rgba(230,230,230,0.75);
@@ -21,15 +38,6 @@
    		width: 100%;
    		top: -1px;
    		z-index: 4;
-	}
-	a{
-		transition-property: color;
-	}
-	a:hover {
-		cursor: pointer;
-		color: red;
-	}
-	a:not(:hover){
 	}
 	/* Style the links inside the navigation bar */
 	.topnav a {
@@ -59,16 +67,6 @@
 	.topnav a.active:nth-of-type(1) {
 	    margin-left: 3%;
 	}
-	
-	wrapper {
- 	    position: relative;
-	    background-color: rgb(255,208,7);
- 	    top: 13vh;
-		display: block;
-		padding-top: 3.8vh;
-		padding-bottom: 8vh;
-		overflow: auto; 
-	}
 	.grid{
 		position: absolute;
 		height: 100%;
@@ -95,13 +93,19 @@
 	}
 	.container-left {
 		display: inline-block;
-		width: 13%;
+		width: 16%;
+		min-width: 143px;
 		margin-left: 3%;
 		overflow: hidden; 
 		clear: right;
-	    min-height: 285px;
+	    min-height: 398px;
+		padding: 5px 15px 20px 0px;
+		border: 1px solid rgba(122, 34, 34, 0.5);
+		border-left: none;
 	}
+	
 	.container-right {
+		border-collapse: collapse;
 	    display: inline-block;
 	    float:right;
 	    width: 67.5%;
@@ -114,8 +118,10 @@
 	input:-webkit-autofill {
 	    -webkit-box-shadow: 0 0 0px 1000px white inset;
 	}
+	form{
+		width: 90%;
+	}
 	input {
-		border: none;
 		margin-top: 1vh;
 	}
 	
@@ -214,7 +220,7 @@
 		margin-right: 5%;
 		float: right;
 		clear: both;
-		display: inline-block;	
+		display: inline-block;
 		transition-property: color;
 	}
 	.right-info:hover {
@@ -231,6 +237,8 @@
 		left: 2.5%;
 		line-height: 16px;
 		font-size: .65em;
+		background-color: rgba(122, 34, 34, 0.08);
+		padding: 5px 10px 5px 10px;
 	}
 	
 	#gdpr-radio {
@@ -240,7 +248,7 @@
 	}
 	#small-arrow {
 		position: relative;
-		width: 12%;
+		width: 6%;
 		left: 10%;
 		transition: 1s;
 	}
@@ -293,8 +301,12 @@
 @media only screen  
 and (max-width : 521px)
 and (orientation : portrait){
+	.container-left{
+   		border-right: none;
+	}
    .container-right{
-   		border-top: 1px solid rgba(66, 134, 244, 0.5);
+   		margin-top: 10%;
+   		border-top: 1px solid rgba(122, 34, 34,0.5);
    	} 
 } 
 
@@ -409,7 +421,7 @@ and (orientation : portrait)
 	}
 	.container-left{
 		display: block;
-		margin: 0 auto;
+		margin: 5px auto;
 	}
 	.gdpr-disclaimer{
 		line-height: 1.5em;
@@ -443,7 +455,6 @@ and (min-device-width: 375px)
 and (max-device-height: 812px) 
 and (orientation : portrait) 
 and (-webkit-device-pixel-ratio: 3){
-	
 	.container-right{
 		margin-top: 8vh;
 		margin-right: 10%;
@@ -579,7 +590,6 @@ and (min-device-height : 376px){
 	}
 	#small-arrow {
     width: 20%;
-    top: -1px;
     }
     .right-info{
     	margin-right: 0%;
@@ -777,20 +787,25 @@ and (max-width: 767px){
 and (min-width : 0px)
 and (max-width: 640px){
 	.container-left{
-		width: 80%;
+		width: 82%;
 		display: block;
 		margin: 0 auto;
+		padding-left: 1%;
+		border-top: none;
+		min-height: 300px;
 	}
 	.container-right{
 		width: 80%;
 		margin-right: 10%;
+		border-top: none;
 	}
+
 }
 
 @media only screen  
 and (min-width : 1024px){
 	#small-arrow{
-		top: 0px;
+		top: 4px;
 		width: 12%;
 	}
 }
@@ -798,7 +813,7 @@ and (min-width : 1024px){
 @media only screen  
 and (max-height: 500px)
 and (orientation : landscape) {
-	wrapper{
-		top: 27vh;
+	.container-left{
+		margin-top: 13vh;
 	}
 }

@@ -57,7 +57,35 @@ function domLoaded() {
 		// $('.cookieInfo').css('visibility','visible');
 		// location.reload();
 	})
-	
+
+
+
+	// CHANGE PAGE STYLE TO WHITE
+
+	function changeCSS(cssFile, cssLinkIndex) {
+
+	    var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+
+	    var newlink = document.createElement("link");
+	    newlink.setAttribute("rel", "stylesheet");
+	    newlink.setAttribute("type", "text/css");
+	    newlink.setAttribute("href", cssFile);
+
+	    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+	}
+
+	$('#yellow-style-picker').click(function(){
+		changeCSS('../assets/css/register.css', 1);
+	})
+
+	$('#white-style-picker').click(function(){
+		changeCSS('../assets/css/register_white.css', 1);
+	})
+	$('#home').click(function(){
+		window.open("../../../../index.html","_self");
+	})
+
+
 	// Moves small arrow @gdpr to alert user
 	function moveArrow(){
 		$('#small-arrow').css('left','5%');
