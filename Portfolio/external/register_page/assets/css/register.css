@@ -198,12 +198,10 @@
 	}
 	#small-arrow {
 		position: relative;
-		width: 6%;
-		top:2px;
+		width: 12%;
 		left: 10%;
 		transition: 1s;
 	}
-
 }
 
 
@@ -538,7 +536,7 @@ and (min-device-height : 376px){
 		margin-left: 2%;
 	}
 	#small-arrow {
-    width: 10%;
+    width: 20%;
     top: -1px;
     }
     .right-info{
@@ -747,3 +745,10 @@ and (max-width: 640px){
 	}
 }
 
+@media only screen  
+and (min-width : 1024px){
+	#small-arrow{
+		top: 0px;
+		width: 12%;
+	}
+}
