@@ -1,5 +1,8 @@
 /*/ Start of DESKTOP styles ----------- /*/
 @media only screen  and (max-width : 2800px) {
+	.not-displayed{
+		display:none;
+	}
 	* {
 		box-sizing: border-box;
 	}
@@ -121,13 +124,20 @@
 	
 	input[type="submit"] {
 		color: white;
-		background-color: rgb(66, 134, 244);
+		background-color: black;
 		display: block;
 		margin-top: 1vh;
 		width: 77px;
 		height: 25px;
 		font-size: 95%;
 		border: none;
+	}
+	/* FIREFOX FIX FOR SUBMIT BUTTON */
+	@-moz-document url-prefix() {
+	  input[type="submit"] {
+	  padding: 2px;
+	  padding-bottom: 4px;
+	  }
 	}
 	input[type = "submit"]:hover {
 	    cursor: pointer;
@@ -230,7 +240,7 @@
 		top: 25vh;
 		left: 2.5%;
 		line-height: 16px;
-		font-size: .65em;
+		font-size: .75em;
 	}
 	
 	#gdpr-radio {
@@ -358,9 +368,6 @@ and (min-device-width: 320px)
 and (max-device-height: 768px) 
 and (orientation : landscape) 
 and (-webkit-device-pixel-ratio: 2){
-	.gdpr-disclaimer{
-		font-size: 0.7em;
-	}
 	#info-logo {
 		top: 0.5em;
 	}}

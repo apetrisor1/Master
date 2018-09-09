@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <style>@import url('https://fonts.googleapis.com/css?family=Open+Sans');</style>
   <meta charset="UTF-8">
+  <meta name="Description" content="Register form  IMDB clone">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="../models/Auth.js" type="text/javascript"></script>
   <script src="../views/register.js" type="text/javascript"></script>
+  <style>@import url('https://fonts.googleapis.com/css?family=Open+Sans');</style>
   <link rel="stylesheet" href="../assets/css/reset.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/register.css" type="text/css">
 </head>
@@ -37,15 +37,21 @@
 
 		  <!--  INPUT FORMS & GDPR TEXT CONTAINER  -->
 		  <div class='container container-left clearfix'>
-			  <form action = "" target = "dummyframe">         
+			  <form action = "" target = "dummyframe">      
+		            <!-- Both name inputs require label -->
+		            <label class='not-displayed' for="username">Enter username</label>   
 			   		<input type = "text" placeholder = "Username" id = "username" name = "_username" required />
 			   		<br/>
+			   		<label class='not-displayed' for="password">Enter password</label>
 					<input type="password" placeholder="8 characters minimum" id="password" name="password" minlength="8" required />
 	               
 					<input id = "submit" type = "submit" value = "Register">
 			  </form>
 			  <p class='gdpr-disclaimer'>This site requires cookies to function properly. To continue registering you must consent to our <a id='gdpr-link'>Cookie & Privacy policies</a>.</p>
+			  <!-- Radio requires label -->
+			  <label class='not-displayed' for="gdpr-radio">Agree to GDPR</label>   
 	       	  <input type = "radio" name = "gdpr" id = "gdpr-radio" value = "false"> 
+
 	       	  <img id='small-arrow' src="../assets/images/register/small_arrow.png"  alt="small_arrow"
 			  </br>
 		  </div>

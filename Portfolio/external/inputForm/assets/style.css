@@ -3,6 +3,9 @@ body {
   font-size: 90%;
 }
 
+.not-displayed{
+  display:none;
+}
 /* Styles related to container*/
 container {
   position: relative;
@@ -56,10 +59,18 @@ input[type="submit"]{
   margin-left: 25.5%;
   margin-top: 19px;
   color: white;
-  background-color: rgb(66, 134, 244);
+  background-color: rgb(103,40,32);
   width: 57.5px;
   height: 22px;
   font-size: 95%;
+}
+/* FIREFOX FIX FOR SUBMIT BUTTON */
+@-moz-document url-prefix() {
+  input[type="submit"] {
+  padding: 2px;
+  padding-bottom: 5px;
+  height: 24px;
+  }
 }
 
 input[type = "submit"]:hover{

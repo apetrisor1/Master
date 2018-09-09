@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="Description" content="Input Form Adrian Foto Diana Cosman">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Input Form</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -15,13 +16,22 @@
   
   <container>
     
-      <form action = "" target = "dummyframe">                      <!--  <form action = "js/script.js"> -->
+      <form action = "" target = "dummyframe">
+         <!-- Both name inputs require label -->
+        <label class='not-displayed' for="fName">Enter first name</label>
         <input type = "text" placeholder = "First name" id = "fName" name = "FirstName"><br />
+        <label class='not-displayed' for="lName">Enter last name</label>
         <input type = "text" placeholder = "Last name" id = "lName" name = "LastName"><br>
         <br><span>Gender</span><br>
-        <input type = "radio" name = "Gender" id = "male" value = "male"> M<br>
-        <input type = "radio" name = "Gender" id = "female" value = "female"> F<br><br>
-        <textarea placeholder = "Your message here..." name = "Comments"></textarea><br>
+
+        <!-- Both radios require label -->
+        <input type = "radio" name = "Gender" id = "male" value = "male"><label for="male">M</label><br>
+        <input type = "radio" name = "Gender" id = "female" value = "female"><label for="female">F</label><br><br>
+
+        <!-- Text area requires label -->
+        <label class='not-displayed' for="text-area">Comment area: leave your comments here</label>
+        <textarea placeholder = "Your message here..." id= "text-area" name = "Comments"></textarea><br>
+        
         <img id = "decorative" src= "assets/images/picture.PNG" alt = "floating boat">
         <input id = "submit" type = "submit" value = "Submit">
       </form>

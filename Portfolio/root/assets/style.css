@@ -1,5 +1,7 @@
 /* general styles */
-
+  #IE-disclaimer {
+    display: none;
+  }
   #frame{
     position: absolute;
     left: 30px;
@@ -764,24 +766,63 @@ and (max-width: 1023px){
    }
 }
 
-/* MS IE 10+ FIX */
+/* MS IE 10+ FIXES */
 _:-ms-lang(x), .cat-eyes 
 { 
   margin-left: 88.35%;
 }
+_:-ms-lang(x), .item:not(:hover) 
+{ 
+  transition: 0.65s;
+}
+_:-ms-lang(x), #IE-disclaimer 
+{ 
+  display: block;
+  margin: 0 auto;
+  margin-top: 15em;
+}
+_:-ms-lang(x), bio
+{
+  display: none;
+}
 
 
-
-/* MS EDGE FIX */
+/* MS EDGE FIXES */
 _:-ms-lang(x), _:-webkit-full-screen, .cat-eyes 
 { 
   margin-left: 46%;
 }
+_:-ms-lang(x), _:-webkit-full-screen, .item:not(:hover), .item:hover
+{ 
+  transition: 0.65s;
+}
+_:-ms-lang(x), _:-webkit-full-screen, .item
+{
+  box-shadow: none;
+}
+_:-ms-lang(x), _:-webkit-full-screen, #IE-disclaimer 
+{ 
+  display: none;
+}
 
-/* FIREFOX FIX*/
+
+/* FIREFOX FIXES*/
 @-moz-document url-prefix() {
+  /*cat eyes fix*/
   .cat-eyes 
   { 
-  margin-left: 46.1%;
+    margin-left: 46.1%;
+  }
+  /*INSETS FIX, replace with SOLID*/
+ 
+  .item:hover{
+    border-bottom: 1px solid #f56c57;
+    border-left: 2px solid #ff7344;
+  }
+  .item:not(:hover){
+    transition: 0.65s;
+  }
+  #IE-disclaimer{ 
+    display: none;
   }
 }
