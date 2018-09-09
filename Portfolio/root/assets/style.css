@@ -804,6 +804,10 @@ _:-ms-lang(x), _:-webkit-full-screen, #IE-disclaimer
 { 
   display: none;
 }
+_:-ms-lang(x), _:-webkit-full-screen, bio
+{
+  display: block;
+}
 
 
 /* FIREFOX FIXES*/
@@ -824,5 +828,8 @@ _:-ms-lang(x), _:-webkit-full-screen, #IE-disclaimer
   }
   #IE-disclaimer{ 
     display: none;
+  }
+  bio{
+    display: block;
   }
 }
