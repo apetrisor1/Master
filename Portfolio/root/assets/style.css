@@ -256,8 +256,8 @@
 }
 
 
-/* IPHONE 5 PORTRAIT*/
-@media only screen and (max-width:415px) {
+/* IPHONE 5,6 PORTRAIT*/
+@media only screen and (max-width:415px) {  
  h1 {
     text-indent: -50%;
   }
@@ -295,7 +295,7 @@
     }
   .item{
     font-size: 0.9em;
-    vertical-align: center;
+    height: 2em;
   }
   .item:nth-of-type(1){
     flex-basis: 30%;
@@ -303,7 +303,7 @@
 
   }
   .item:nth-of-type(2){
-    flex-basis: 46%;
+    flex-basis: 45%;
     position: relative;
 
   }
@@ -314,14 +314,14 @@
     left: 3%;
   }
   .item:nth-of-type(4){
-    flex-basis: 37% ;
+    flex-basis: 36% ;
     align-self: center;
     position: relative;
     left: -6.9%;
 
   }
   .item:nth-of-type(5){
-    flex-basis: 37% ;
+    flex-basis: 35%;
     align-self: flex-start;
     position: relative;
     left: -8%;
