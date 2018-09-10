@@ -117,8 +117,8 @@
     cursor: pointer;
     border-bottom: 1px outset #f56c57;
     border-left: 2px outset #f56c57;
-    transition: 1s;
-    text-indent: 6%;
+    transition: 1.33s;
+    text-indent: 5.66%;
   }
 
 
@@ -527,7 +527,42 @@
     }
   }
 
-/*Large screen FIX*/
+/*Larger screens FIXES*/
+@media only screen 
+  and (min-width: 800px){
+    #about-me, #portfolio, #curriculum_vitae{
+      width: 15%;
+      text-indent: 0%;
+      left: 5.5%;
+    }
+    #about-me:hover, #portfolio:hover, #curriculum_vitae:hover{
+      text-indent: 1.33%;
+    }
+    .open-app, .about, .api-info-button {
+    width: 55%;
+    margin-left: 16%;
+    }
+
+  }
+
+
+
+
+@media only screen 
+  and (min-width: 1025px){
+    #about-me, #portfolio, #curriculum_vitae{
+      width: 11%;
+      text-indent: 0%;
+      left: 5.5%;
+    }
+    #about-me:hover, #portfolio:hover, #curriculum_vitae:hover{
+      text-indent: 1.33%;
+    }
+    .open-app, .about, .api-info-button {
+    width: 59%;
+    margin-left: 16%;
+    }
+  }
 @media only screen 
   and (min-width: 1230px){
    
