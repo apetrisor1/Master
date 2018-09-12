@@ -103,8 +103,4 @@ function domLoaded(){
 			$('.job_description').html(jobs[jobTracker].description);
 		}
 	})
-
-
-
-
 }
