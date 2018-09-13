@@ -57,9 +57,9 @@ var app_info = [
     name: 'register',
     about: '<ul>' +
     '<li>Register form for joining an IMDB clone.</li>' +
-    "<li>See site@ <b><a href='https://melaniasiit.github.io/frontend5-1/pages/home.html'>https://melaniasiit.github.io/frontend5-1/pages/home.html</a></b></li>" +
-    '<li>I coded app presented here, most of the homepage design of main app and all front-end</li>' +
-    '<li>processes related to authentification. Application@link tracks user using cookies.</li>' +
+    "<li>See site@ <b><a href='https://melaniasiit.github.io/frontend5-1/pages/home.html'>https://melaniasiit.github.io/frontend5-1/pages/home.html</a></b>.</li>" +
+    '<li>My duties included the register page, all front-end processes related to authentification and a</li>' +
+    '<li>considerable part of homepage design. Application@link tracks user using cookies. Site is work in progress.</li>' +
     '</ul>',
     short_url: `Portfolio/external/register_page/pages/register.html`,
     api_description: 
