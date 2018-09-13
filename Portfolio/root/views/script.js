@@ -57,10 +57,9 @@ var app_info = [
     name: 'register',
     about: '<ul>' +
     '<li>Register form for joining an IMDB clone.</li>' +
-    '<li>See site@ <b>https://melaniasiit.github.io/frontend5-1/pages/home.html </b></li>' +
-    '<li>I coded app presented here, most of the homepage design and all processes</li>' +
-    '<li>related to authentification. This console logs token received from server.</li>' +
-    '<li>Application@link has cookie functionality.</li>' +
+    '<li>See site@ <b>https://melaniasiit.github.io/frontend5-1/pages/home.html</b></li>' +
+    '<li>I coded app presented here, most of the homepage design of main app and all front-end</li>' +
+    '<li>processes related to authentification. Application@link tracks user using cookies.</li>' +
     '</ul>',
     short_url: `Portfolio/external/register_page/pages/register.html`,
     api_description: 
