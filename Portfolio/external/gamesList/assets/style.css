@@ -1,3 +1,31 @@
+
+.loader {
+  position: fixed;
+  left: 48%;
+  top: 48vh;
+  border: 16px solid #1d3356;
+  border-radius: 50%;
+  border-top: 16px solid #ce6449;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
 body {
   padding: 4% 2% 1% 5%;
   background-color: #1d3356;  /*   <-----    */
@@ -324,9 +352,21 @@ iframe {
   .submitter, .cancel {
     margin-left: 3.9%;
   }
+  .loader {
+  position: fixed;
+  left: 44%;
+  top: 48vh;
+  }
 }
 
 
 
-
-
+/*
+@media screen and (min-width: 1300px) {
+   .loader {
+  position: fixed;
+  left: 44%;
+  top: 48vh;
+  }
+}
+*/

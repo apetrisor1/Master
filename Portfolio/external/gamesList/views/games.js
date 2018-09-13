@@ -35,6 +35,10 @@ window.addEventListener("load", function() {
   var gamesModel = new Games();
   // ALL games received are in games model
 
+  function hideSpinner(){
+    $('.loader').css('display','none');
+  }
+  // .then(hideSpinner).
  
  
   
@@ -236,7 +240,7 @@ window.addEventListener("load", function() {
       window.open(`game.html?gameID=${game._id}`, "_blank");
     })
     
-   
+   hideSpinner();   
     
   }
   
