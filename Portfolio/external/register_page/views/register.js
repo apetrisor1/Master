@@ -52,10 +52,13 @@ function domLoaded() {
 		// go to login page
 		location.reload();
 	})
-
 	$('#gdpr-link').click(function(){
 		// $('.cookieInfo').css('visibility','visible');
 		// location.reload();
+	})
+	$('.uma').click(function(){
+		alert("You will now be redirected to this page's related team project!"+"\n"+"To know about my tasks in this project see this app's 'about'");
+		window.open("https://melaniasiit.github.io/frontend5-1/pages/home.html","_blank");
 	})
 
 
