@@ -690,3 +690,9 @@ and (max-width: 421px){
 		left: 10%;
 	}
 }
+@media only screen 
+and (orientation : landscape){
+	.container-left {
+		min-height: 19em;
+	}
+}
