@@ -57,7 +57,7 @@ var app_info = [
     name: 'register',
     about: '<ul>' +
     '<li>Register form for joining an IMDB clone.</li>' +
-    '<li>See site@ <b>https://melaniasiit.github.io/frontend5-1/pages/home.html</b></li>' +
+    "<li>See site@ <b><a href='https://melaniasiit.github.io/frontend5-1/pages/home.html'>https://melaniasiit.github.io/frontend5-1/pages/home.html</a></b></li>" +
     '<li>I coded app presented here, most of the homepage design of main app and all front-end</li>' +
     '<li>processes related to authentification. Application@link tracks user using cookies.</li>' +
     '</ul>',
